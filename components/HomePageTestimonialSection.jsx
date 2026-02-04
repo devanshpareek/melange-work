@@ -35,6 +35,22 @@ const TestimonialVideosSection = ({ videos }) => {
               key={index}
               className="group relative rounded-2xl max-h-140 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-white"
             >
+              {/* Play Overlay */}
+              <div className="play-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300 z-10 pointer-events-none">
+                <div
+                  className="bg-black/40 backdrop-blur-sm rounded-full p-3 pr-4 flex items-center cursor-pointer
+                  group-hover:scale-110 transition-transform duration-300"
+                >
+                  <svg
+                    className="w-4 h-4 text-white ml-1"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+
               {/* Video Container with aspect ratio */}
               <div
                 className="relative bg-white"
@@ -43,10 +59,22 @@ const TestimonialVideosSection = ({ videos }) => {
                 {/* 9:16 Aspect Ratio for vertical videos */}
                 <video
                   className="absolute top-0 left-0 w-full max-h-140 object-cover"
-                  controls
+                  // controls
                   preload="metadata"
-                  poster={video.thumbnail}
+                  // poster={video.thumbnail}
                   onClick={() => setActiveVideo(index)}
+                  onPlay={(e) => {
+                    e.currentTarget
+                      .closest(".group")
+                      ?.querySelector(".play-overlay")
+                      ?.classList.add("opacity-0");
+                  }}
+                  onPause={(e) => {
+                    e.currentTarget
+                      .closest(".group")
+                      ?.querySelector(".play-overlay")
+                      ?.classList.remove("opacity-0");
+                  }}
                 >
                   <source src={video.url} type="video/mp4" />
                   Your browser does not support the video tag.
