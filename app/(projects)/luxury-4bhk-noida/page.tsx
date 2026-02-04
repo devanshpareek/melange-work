@@ -79,16 +79,16 @@ const projectDetails = {
 
 const reelsData = [
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DJrk78DywCK/embed",
   },
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DJzRY1NI7uW/embed",
   },
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DOBXPkIklWj/embed",
   },
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DJhCq5-oDJe/embed",
   },
 ];
 const page = () => {

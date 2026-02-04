@@ -4,8 +4,8 @@ import "./InstagramReels.css";
 
 const InstagramReels = ({ reels }) => {
   return (
-    <section className="bg-gradient-to-b from-white via-gray-100 to-white py-16 px-4">
-      <div className="container mx-auto px-4 md:px-8 lg:px-16">
+    <section className="bg-gradient-to-b from-white via-gray-100 to-white py-16 px-4 flex flex-col justify-center center">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16  gap-12">
         {/* Section Header */}
         {/* <div className="text-center mb-12">
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#6e6250] mb-4">
@@ -18,7 +18,11 @@ const InstagramReels = ({ reels }) => {
         </div> */}
 
         {/* Reels Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${
+            reels.length >= 4 ? "4" : reels.length.toString()
+          } gap-6 max-w-7xl mx-auto`}
+        >
           {reels.map((reel, index) => (
             <div
               key={index}

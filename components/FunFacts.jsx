@@ -51,7 +51,7 @@ export default function FunFacts() {
     {
       icon: (
         <svg
-          className="w-16 h-16"
+          className="w-12 h-12 md:w-16 md:h-16"
           viewBox="0 0 64 64"
           fill="none"
           stroke="currentColor"
@@ -72,7 +72,7 @@ export default function FunFacts() {
     {
       icon: (
         <svg
-          className="w-16 h-16"
+          className="w-12 h-12 md:w-16 md:h-16"
           viewBox="0 0 64 64"
           fill="none"
           stroke="currentColor"
@@ -90,7 +90,7 @@ export default function FunFacts() {
     {
       icon: (
         <svg
-          className="w-16 h-16"
+          className="w-12 h-12 md:w-16 md:h-16"
           viewBox="0 0 64 64"
           fill="none"
           stroke="currentColor"
@@ -109,7 +109,7 @@ export default function FunFacts() {
     {
       icon: (
         <svg
-          className="w-16 h-16"
+          className="w-12 h-12 md:w-16 md:h-16"
           viewBox="0 0 64 64"
           fill="none"
           stroke="currentColor"
@@ -136,7 +136,6 @@ export default function FunFacts() {
   ];
 
   return (
-    // <section className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-20 px-4 overflow-hidden">
     <section className="relative bg-gradient-to-b from-white via-gray-200 to-white py-10 px-4 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
@@ -150,45 +149,38 @@ export default function FunFacts() {
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-4 tracking-tight">
             SOME FUN FACTS
           </h2>
-          <div
-            className="separation-line w-24 h-1 bg-gradient-to-b from-transparent via-zinc-400 to-transparent
- mx-auto mb-4"
-          ></div>
+          <div className="separation-line w-24 h-1 bg-gradient-to-b from-transparent via-zinc-400 to-transparent mx-auto mb-4"></div>
           <p className="mini-title-desc text-xl text-black font-light">
             Our Work - By The Numbers
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        {/* Stats Grid - 2 columns on mobile, 4 on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-12">
           {stats.map((stat, index) => (
-            // <div
-            //   key={index}
-            //   className="group text-center bg-gradient-to-b from-[#8d806c] via-[#c5b8a4] to-[#8d806c] p-5 rounded-xl"
-            // >
             <div
               key={index}
-              className="group text-center bg-white p-5 rounded-xl"
+              className="group text-center bg-white p-4 md:p-5 rounded-xl"
             >
               {/* Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur-sm border-2 border-[#c5b49a] flex items-center justify-center group-hover:bg-white/20 group-hover:scale-110 group-hover:border-[#c5b49a]/30 transition-all duration-500">
+              <div className="flex justify-center mb-4 md:mb-6">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-white/10 backdrop-blur-sm border-2 border-[#c5b49a] flex items-center justify-center group-hover:bg-white/20 group-hover:scale-110 group-hover:border-[#c5b49a]/30 transition-all duration-500">
                   <div className="text-[#c5b49a]">{stat.icon}</div>
                 </div>
               </div>
 
               {/* Number */}
-              <div className="text-5xl md:text-6xl font-bold text-[#c5b49a] mb-4 tabular-nums">
+              <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#c5b49a] mb-2 md:mb-4 tabular-nums">
                 <Counter end={stat.number} suffix={stat.suffix} />
               </div>
 
               {/* Label */}
-              <p className="text-lg text-[#c5b49a] font-medium tracking-wider">
+              <p className="text-sm md:text-lg text-[#c5b49a] font-medium tracking-wider">
                 {stat.label}
               </p>
 
               {/* Decorative line */}
-              <div className="mt-6 mx-auto w-16 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+              <div className="mt-4 md:mt-6 mx-auto w-12 md:w-16 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
             </div>
           ))}
         </div>

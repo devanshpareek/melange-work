@@ -78,18 +78,20 @@ const projectDetails = {
   },
 };
 
+
+
 const reelsData = [
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DS2iaVTErpx/embed",
   },
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DTQSd7Ckq_d/embed",
   },
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DTajdKPkhPU/embed",
   },
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DSK1SKsEgLD/embed",
   },
 ];
 const page = () => {

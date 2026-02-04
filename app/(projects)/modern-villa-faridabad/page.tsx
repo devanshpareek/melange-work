@@ -2,6 +2,7 @@ import React from "react";
 import { ClientTestimonial, ProjectDescription } from "../../dlf-phase-4/page";
 import OurWork from "@/components/OurWork";
 import TestimonialVideo from "@/app/components/TestimonialVideo";
+import InstagramReels from "@/app/components/InstagramReels";
 
 const images1 = [
   { image: "/AshishGupta1_1.jpg" },
@@ -60,6 +61,17 @@ const projectDetails = {
   },
 };
 
+const reelsData = [
+  {
+    embedUrl: "https://www.instagram.com/reel/DRWhEawEpeF/embed",
+  },
+  {
+    embedUrl: "https://www.instagram.com/reel/DSmBu8-kmF2/embed",
+  },
+  {
+    embedUrl: "https://www.instagram.com/reel/DSXn4rkEh9x/embed",
+  },
+];
 const page = () => {
   return (
     <div>
@@ -77,6 +89,7 @@ const page = () => {
 
       <ClientTestimonial testimonial={projectDetails.testimonial} />
       <TestimonialVideo video={projectDetails.testimonial.clip} />
+      <InstagramReels reels={reelsData} />
     </div>
   );
 };

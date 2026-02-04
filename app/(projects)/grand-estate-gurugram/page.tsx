@@ -3,7 +3,6 @@ import { ClientTestimonial, ProjectDescription } from "../../dlf-phase-4/page";
 import OurWork from "@/components/OurWork";
 import TestimonialVideo from "@/app/components/TestimonialVideo";
 import InstagramReels from "@/app/components/InstagramReels";
-import { reelsData } from "../platinum-towers-gurugram/page";
 
 const images1 = [
   { image: "/SashiAggarwal1_1.jpg" },
@@ -79,6 +78,15 @@ const projectDetails = {
   },
 };
 
+export const reelsData = [
+  {
+    embedUrl: "https://www.instagram.com/reel/DRrmAfLEs_2/embed",
+  },
+  {
+    embedUrl: "https://www.instagram.com/reel/DR7f2edkt7h/embed",
+  },
+];
+
 const page = () => {
   return (
     <div>
@@ -106,7 +114,7 @@ const page = () => {
 
       <ClientTestimonial testimonial={projectDetails.testimonial} />
       <TestimonialVideo video={projectDetails.testimonial.clip} />
-      <InstagramReels reels={reelsData} />
+      {/* <InstagramReels reels={reelsData} /> */}
     </div>
   );
 };

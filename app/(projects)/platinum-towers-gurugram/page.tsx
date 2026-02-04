@@ -60,20 +60,19 @@ const projectDetails = {
     clip: "/PraveenNangiaTestimonialClip.mp4",
   },
 };
-// https://www.instagram.com/reel/C9rso9ISNGS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
 
 export const reelsData = [
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DNGYc0GyrEz/embed",
   },
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DNBJ6WPyXmG/embed",
   },
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DMdORovIpfQ/embed",
   },
   {
-    embedUrl: "https://www.instagram.com/reel/C9rso9ISNGS/embed",
+    embedUrl: "https://www.instagram.com/reel/DKSFLLRIQ4O/embed",
   },
 ];
 const page = () => {

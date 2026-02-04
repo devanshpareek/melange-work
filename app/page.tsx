@@ -295,8 +295,8 @@ export default function Home() {
         <FunFacts />
       </div>
       <div id="testimonials">
-        <Testimonials />
         <TestimonialVideosSection videos={testimonialVideos} />
+        <Testimonials />
       </div>
       <div id="contact-us">
         <ContactUs />

@@ -89,9 +89,9 @@ export default function Navbar() {
           <button
             onClick={() => scrollToSection("contact-us")}
             type="button"
-            className="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none transition-all duration-300"
+            className="text-white bg-[#c5b49a] hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-bold leading-5 rounded-lg text-sm px-3 py-2 focus:outline-none transition-all duration-300"
           >
-            Get Started
+            GET STARTED
           </button>
         </div>
 
@@ -179,7 +179,7 @@ export default function Navbar() {
                 TESTIMONIALS
               </button>
             </li>
-            <li>
+            {/* <li>
               <button
                 onClick={() => scrollToSection("contact-us")}
                 className={`block py-2 px-3 text-heading text-l text-white ${
@@ -188,7 +188,7 @@ export default function Navbar() {
               >
                 CONTACT
               </button>
-            </li>
+            </li> */}
             <li className="relative">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}

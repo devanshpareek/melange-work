@@ -98,9 +98,9 @@ export default function Testimonials({ showTitle = true }) {
                     : "opacity-0 translate-x-full scale-95"
                 }`}
               >
-                <div className="bg-white backdrop-blur-sm border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-12 text-center shadow-2xl h-full flex flex-col justify-center overflow-y-auto max-h-[500px] md:max-h-none">
+                <div className="bg-white backdrop-blur-sm border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-12 text-center shadow-2xl h-full flex flex-col justify-center center overflow-y-auto max-h-[500px] md:max-h-none">
                   {/* Quote Text */}
-                  <p className="text-base md:text-xl lg:text-2xl text-[#6e6250] leading-relaxed mt-15 mb-6 md:mb-8 font-light italic">
+                  <p className="text-base md:text-xl lg:text-2xl text-[#6e6250] leading-relaxed font-light italic align-middle">
                     "{testimonial.quote}"
                   </p>
 

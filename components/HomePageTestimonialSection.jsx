@@ -59,11 +59,15 @@ const TestimonialVideosSection = ({ videos }) => {
                 {/* 9:16 Aspect Ratio for vertical videos */}
                 <video
                   className="absolute top-0 left-0 w-full max-h-140 object-cover"
-                  // controls
+                  controls
                   preload="metadata"
                   // poster={video.thumbnail}
-                  onClick={() => setActiveVideo(index)}
+                  onClick={() => {
+                    console.log("hi from click");
+                    setActiveVideo(index);
+                  }}
                   onPlay={(e) => {
+                    console.log("hi from play");
                     e.currentTarget
                       .closest(".group")
                       ?.querySelector(".play-overlay")
