@@ -17,7 +17,7 @@ const TestimonialVideosSection = ({ videos }) => {
         {/* Section Header */}
         <div className="text-center mb-6">
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-4 tracking-tight">
-            Client Stories
+            CLIENT STORIES
           </h2>
           <div
             className="separation-line w-24 h-1 bg-gradient-to-b from-transparent via-zinc-400 to-transparent
