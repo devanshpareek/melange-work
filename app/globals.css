@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -20,7 +21,27 @@
 }
 
 body {
-  background: var(--background);
+  /* background-color: white; */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+h2, h3 {
+  font-family: "Playfair Display", serif;
+  color: #6e6250;
+}
+
+.separation-line {
+  background-color: #9b8d7a;
+}
+
+.mini-title-desc {
+  color: #c5b49a;
+}
+
+/* .playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
