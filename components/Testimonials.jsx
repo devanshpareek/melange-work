@@ -5,24 +5,24 @@ export default function Testimonials({ showTitle = true }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const testimonials = [
-    // {
-    //   quote:
-    //     "We are in love with the space. Hi, my name is Shreya Gupta and working with Milans was a wonderful experience. Sangeeta ma'am truly understood each one of us and the interiors were done wonderfully. If you see us, you will understand what we mean because every furniture, every fabric, like really reflects us and the team also really understood us well.",
-    //   author: "Shreya Gupta",
-    //   role: "Independent house (3 floors + terrace) end to end project, Faridabad.",
-    // },
+    {
+      quote:
+        "We are in love with the space. Hi, my name is Shreya Gupta and working with Milans was a wonderful experience. Sangeeta ma'am truly understood each one of us and the interiors were done wonderfully. If you see us, you will understand what we mean because every furniture, every fabric, like really reflects us and the team also really understood us well.",
+      author: "Shreya Gupta",
+      role: "Independent house (3 floors + terrace) end to end project, Faridabad.",
+    },
     {
       quote:
         "My experience with her, like, you know, there was a comfort level with her, her team, everybody, even small, small details, like curtains, anything, there's a warmth in our house. The most important thing about her is that it's not like a house, it's a home. When you enter, it gives a feeling you have come to your home, your abode. Very good, awesome. We love it, and there was a comfort level with her. She knew it. She was so confident about it. But finally, we are all very happy living in this house, and every day, I think, is the one thing I do is just remember her every day.",
       author: "Praveen Nangia",
       role: "4 BHK apartment in Gurugram with contemporary design.",
     },
-    // {
-    //   quote:
-    //     "My house was very old, so I wanted to get it renovated. And this could happen by Sangeeta Kapoor. She really made my dreams come true. The garden, the big rooms, the peaceful environment, where you can meditate, a beautiful temple, everything is beautiful, you don't feel like going anywhere. I would just say that if anyone wants to build their house, please choose her. She is the best.",
-    //   author: "Sashi Aggarwal",
-    //   role: "Independent house (3 floors + terrace) end to end project, Gurugram.",
-    // },
+    {
+      quote:
+        "My house was very old, so I wanted to get it renovated. And this could happen by Sangeeta Kapoor. She really made my dreams come true. The garden, the big rooms, the peaceful environment, where you can meditate, a beautiful temple, everything is beautiful, you don't feel like going anywhere. I would just say that if anyone wants to build their house, please choose her. She is the best.",
+      author: "Sashi Aggarwal",
+      role: "Independent house (3 floors + terrace) end to end project, Gurugram.",
+    },
   ];
 
   // Auto-slide every 6 seconds
