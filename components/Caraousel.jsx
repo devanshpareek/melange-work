@@ -1,4 +1,4 @@
-"use client"; // Add this at the top for Next.js
+"use client";
 
 import React, { useState, useEffect } from "react";
 
@@ -26,7 +26,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div id="home-caraousel-wrapper" className="relative w-full">
-      <div className="relative h-100 overflow-hidden md:h-screen">
+      <div className="relative h-screen overflow-hidden">
         {images.map((img, idx) => (
           <div
             key={`carousel-slide-${idx}`}
@@ -53,18 +53,15 @@ const Carousel = ({ images }) => {
               idx === currentSlide ? "bg-white w-8" : "bg-white/50"
             }`}
             onClick={() => goToSlide(idx)}
+            aria-label={`Go to slide ${idx + 1}`}
           ></button>
         ))}
       </div>
 
       {/* Previous Button */}
-      {/* <div
-        // type="button"
-        className="absolute top-0 left-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group"
-        // onClick={prevSlide}
-      >
-        <button type="button" onClick={prevSlide}>
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+      <div className="absolute top-0 left-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group">
+        <button type="button" onClick={prevSlide} aria-label="Previous slide">
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 transition-all duration-300">
             <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
               <path
                 stroke="currentColor"
@@ -75,12 +72,12 @@ const Carousel = ({ images }) => {
             </svg>
           </span>
         </button>
-      </div> */}
+      </div>
 
       {/* Next Button */}
-      {/* <div className="absolute top-0 right-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group">
-        <button type="button" onClick={nextSlide}>
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+      <div className="absolute top-0 right-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group">
+        <button type="button" onClick={nextSlide} aria-label="Next slide">
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 transition-all duration-300">
             <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
               <path
                 stroke="currentColor"
@@ -91,7 +88,7 @@ const Carousel = ({ images }) => {
             </svg>
           </span>
         </button>
-      </div> */}
+      </div>
     </div>
   );
 };

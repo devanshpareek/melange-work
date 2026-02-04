@@ -261,37 +261,47 @@ export default function Home() {
   return (
     <div>
       <Caraousel images={homePageCaraouselImgs} />
-      <AboutUs />
-      <WhatWeDo
-        services={services}
-        title={"WHAT WE DO"}
-        description={"Everything to turn your house into a home"}
-      />
-      <OurWork
-        products={products1}
-        centerImage={centerImage1}
-        showTitle={true}
-      />
-      <OurWork
-        products={products2}
-        centerImage={centerImage2}
-        showTitle={false}
-      />
-      <OurWork
-        products={products3}
-        centerImage={centerImage3}
-        showTitle={false}
-      />
-      <OurProcess
-        services={steps}
-        title={"THE PROCESS"}
-        description={"How we work"}
-      />
-      <FunFacts />
+      <div id="about-us">
+        <AboutUs />
+      </div>
+      <div id="what-we-do">
+        <WhatWeDo
+          services={services}
+          title={"WHAT WE DO"}
+          description={"Everything to turn your house into a home"}
+        />
+      </div>
+      <div id="our-work">
+        <OurWork
+          products={products1}
+          centerImage={centerImage1}
+          showTitle={true}
+        />
+        <OurWork
+          products={products2}
+          centerImage={centerImage2}
+          showTitle={false}
+        />
+        <OurWork
+          products={products3}
+          centerImage={centerImage3}
+          showTitle={false}
+        />
+        <OurProcess
+          services={steps}
+          title={"THE PROCESS"}
+          description={"How we work"}
+        />
+        <FunFacts />
+      </div>
+      <div id="testimonials">
+        <Testimonials />
+        <TestimonialVideosSection videos={testimonialVideos} />
+      </div>
+      <div id="contact-us">
+        <ContactUs />
+      </div>
 
-      <Testimonials />
-      <TestimonialVideosSection videos={testimonialVideos} />
-      <ContactUs />
       <Footer />
     </div>
   );

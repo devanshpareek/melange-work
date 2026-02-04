@@ -3,7 +3,7 @@ import { ClientTestimonial, ProjectDescription } from "../../dlf-phase-4/page";
 import OurWork from "@/components/OurWork";
 import TestimonialVideo from "@/app/components/TestimonialVideo";
 import InstagramReels from "@/app/components/InstagramReels";
-import { reelsData } from "../praveen-nangia/page";
+import { reelsData } from "../platinum-towers-gurugram/page";
 
 const images1 = [
   { image: "/SashiAggarwal1_1.jpg" },
