@@ -50,7 +50,7 @@ const projectDetails = {
   title: "Luxury Residence Interior",
   subtitle: "Independent house (3 floors + terrace) end to end project.",
   details: {
-    location: "Gurugram",
+    location: "Faridabad",
     area: "27000 sq ft",
     duration: "2 years",
     year: "2025",

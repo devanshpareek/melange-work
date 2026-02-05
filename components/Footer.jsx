@@ -43,8 +43,8 @@ export default function Footer() {
                 MELANGE
               </h3>
               <p className="text-[#898174] leading-relaxed mb-6">
-                Creating beautiful and elegant living spaces for over 15 years
-                across India and the United Kingdom.
+                Creating beautiful and elegant living spaces for over 25+ years
+                across India and the UK.
               </p>
               {/* Social Icons */}
               <div className="flex items-center gap-4 justify-center md:justify-start">

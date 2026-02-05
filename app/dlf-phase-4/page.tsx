@@ -98,7 +98,7 @@ export const ProjectDescription = ({ project }: { project: any }) => {
         </div>
 
         {/* Project Details Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 py-8 border-y border-gray-200">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8 py-8 border-y border-gray-200">
           <div className="text-center">
             <div className="text-2xl font-bold text-[#6e6250] mb-1">
               {project.details.location}
@@ -121,14 +121,6 @@ export const ProjectDescription = ({ project }: { project: any }) => {
             </div>
             <div className="text-sm text-gray-600 uppercase tracking-wide">
               Duration
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-[#6e6250] mb-1">
-              {project.details.year}
-            </div>
-            <div className="text-sm text-gray-600 uppercase tracking-wide">
-              Year
             </div>
           </div>
         </div>

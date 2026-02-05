@@ -47,16 +47,16 @@ const centerImage4 = "/Deepali4_5.jpg";
 // Content:
 
 const projectDetails = {
-  title: "Independent house, Pitampura",
+  title: "Independent house in Deepali Enclave",
   subtitle: "Independent house (3 floors + terrace) end to end project",
   details: {
-    location: "Deepali Enclave, Pitampura, New Delhi",
+    location: "Deepali Enclave, New Delhi",
     area: "2600 sq ft",
     duration: "18 months",
     year: "year not found",
   },
   description: [
-    "Turning a 2600 sq ft independent house of 3 floors in vibrant Pitampura into a stunning family haven demanded our complete expertise from layout to final flourish.",
+    "Turning a 2600 sq ft independent house of 3 floors in vibrant Deepali Enclave into a stunning family haven demanded our complete expertise from layout to final flourish.",
     "As their trusted interior designer, we managed every facet—premium flooring, intricate ceiling designs, bespoke wall finishes, custom furniture, so many floor inlay designs on each floor and flawless integration of every detail.",
     "The journey wasn't without hurdles: navigating meticulous stone selections, perfecting paint shades, and curating fabrics through countless collaborative discussions ensured every choice aligned perfectly with the client's dreams.",
     "These challenges only sharpened our precision, resulting in a space that radiates warmth, sophistication, and enduring style.",
@@ -77,8 +77,6 @@ const projectDetails = {
     clip: "not_found",
   },
 };
-
-
 
 const reelsData = [
   {

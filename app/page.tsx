@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import "@/components/Caraousel";
 import "@/components/WhatWeDo";
@@ -10,6 +12,7 @@ import Testimonials from "@/components/Testimonials";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
 import TestimonialVideosSection from "../components/HomePageTestimonialSection";
+import { useState } from "react";
 
 const homePageCaraouselImgs = [
   "/Slider1.jpg",
@@ -18,6 +21,7 @@ const homePageCaraouselImgs = [
   "/Slider4.jpg",
   "/Slider5.jpg",
 ];
+
 const products1 = [
   {
     image: "/OurWork1_1.jpg",
@@ -68,6 +72,35 @@ const products3 = [
     image: "OurWork3_4.jpg",
   },
 ];
+
+// Additional projects for "show more"
+
+const products4 = [
+  { image: "/Praveen_Nangia2_1.jpg" },
+  { image: "/Praveen_Nangia2_2.jpg" },
+  { image: "/Praveen_Nangia2_3.jpg" },
+  { image: "/Praveen_Nangia2_4.jpg" },
+];
+
+const centerImage4 = "/Praveen_Nangia2_5.jpg";
+
+const products5 = [
+  { image: "/Deepali1_1.jpg" },
+  { image: "/Deepali1_2.jpg" },
+  { image: "/Deepali1_3.jpg" },
+  { image: "/Deepali1_4.jpg" },
+];
+
+const centerImage5 = "/Deepali1_5.jpg";
+
+const products6 = [
+  { image: "/Sec_15_Noida_2_1.jpg" },
+  { image: "/Sec_15_Noida_2_2.jpg" },
+  { image: "/Sec_15_Noida_2_3.jpg" },
+  { image: "/Sec_15_Noida_2_4.jpg" },
+];
+
+const centerImage6 = "/Sec_15_Noida_2_5.jpg";
 
 export const services = [
   {
@@ -207,8 +240,6 @@ export const services = [
   },
 ];
 
-// bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900
-
 const steps = [
   {
     title: "YOU VISIT OUR STUDIO",
@@ -236,21 +267,18 @@ const steps = [
 const testimonialVideos = [
   {
     url: "/AshishGuptaTestemonial.mp4",
-    // thumbnail: "/images/testimonial-1-thumb.jpg",
     clientName: "Shreya Gupta",
     projectDetails:
       "Independent house (3 floors + terrace) end to end project, Faridabad.",
   },
   {
     url: "/PraveenNangiaTestimonialClip.mp4",
-    // thumbnail: "/images/testimonial-2-thumb.jpg",
     clientName: "Praveen Nangia",
     projectDetails:
       "4 BHK apartment in Gurugram with contemporary design, Gurugram.",
   },
   {
     url: "SashiAggarwalTestimonialVideo.mp4",
-    // thumbnail: "/images/testimonial-3-thumb.jpg",
     clientName: "Sashi Aggarwal",
     projectDetails:
       "Independent house (3 floors + terrace) end to end project, Gurugram.",
@@ -258,6 +286,20 @@ const testimonialVideos = [
 ];
 
 export default function Home() {
+  const [showMoreProjects, setShowMoreProjects] = useState(false);
+
+  const handleToggleProjects = () => {
+    setShowMoreProjects(!showMoreProjects);
+
+    // Smooth scroll to the section when closing
+    if (showMoreProjects) {
+      const ourWorkSection = document.getElementById("our-work");
+      if (ourWorkSection) {
+        ourWorkSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
+
   return (
     <div>
       <Caraousel images={homePageCaraouselImgs} />
@@ -287,6 +329,58 @@ export default function Home() {
           centerImage={centerImage3}
           showTitle={false}
         />
+
+        {showMoreProjects && (
+          <div className="animate-fadeIn">
+            <OurWork
+              products={products4}
+              centerImage={centerImage4}
+              showTitle={false}
+            />
+            <OurWork
+              products={products5}
+              centerImage={centerImage5}
+              showTitle={false}
+            />
+            <OurWork
+              products={products6}
+              centerImage={centerImage6}
+              showTitle={false}
+            />
+          </div>
+        )}
+
+        {/* Toggle Button */}
+        <div className="flex justify-center py-12">
+          <button
+            onClick={handleToggleProjects}
+            className="group relative px-8 py-4 bg-[#c5b49a] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
+          >
+            <span className="text-lg">
+              {showMoreProjects
+                ? "View Less Projects"
+                : "Explore More Projects"}
+            </span>
+            <svg
+              className={`w-5 h-5 transition-transform duration-300 ${
+                showMoreProjects ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Additional Projects */}
+
         <OurProcess
           services={steps}
           title={"THE PROCESS"}

@@ -102,8 +102,8 @@ export default function AboutUs({ showTitle = true }) {
                 <span className="text-2xl font-semibold text-gray-900">
                   Sangeeta Kapoor
                 </span>{" "}
-                has been designing homes for clients across India and the United
-                Kingdom for over fifteen years.
+                has been designing homes for clients across India and the UK for
+                over twenty five years.
               </p>
 
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
@@ -133,7 +133,7 @@ export default function AboutUs({ showTitle = true }) {
               </p>
 
               {/* Decorative stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
+              {/* <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
                 <div>
                   <div className="text-4xl font-bold text-gray-900 mb-1">
                     15+
@@ -156,7 +156,7 @@ export default function AboutUs({ showTitle = true }) {
                     Cities
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* CTA Button */}
               {/* <div className="pt-6">

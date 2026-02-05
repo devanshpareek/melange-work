@@ -62,7 +62,7 @@ export default function Navbar() {
     { name: "Luxury 4BHK Noida", slug: "luxury-4bhk-noida" },
     { name: "Modern Villa Faridabad", slug: "modern-villa-faridabad" },
     { name: "Platinum Towers Gurugram", slug: "platinum-towers-gurugram" },
-    { name: "Deepali Enclave Pitampura", slug: "deepali-enclave-pitampura" },
+    { name: "Deepali Enclave", slug: "deepali-enclave-pitampura" },
     { name: "Ramlila Faridabad", slug: "ramlila-faridabad" },
     { name: "Grand Estate Gurugram", slug: "grand-estate-gurugram" },
     { name: "SEC 15 Noida", slug: "sec-15-noida" },
