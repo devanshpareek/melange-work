@@ -71,7 +71,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-neutral-primary fixed w-full z-50 top-0 start-0 border-default transition-all duration-300 ${
+      className={`fixed w-full z-50 backdrop-blur-md bg-[#c5b49a]/95 top-0 start-0 transition-all duration-300 ${
         isScrolled
           ? "bg-white backdrop-blur-md shadow-lg border-b border-slate-300"
           : "bg-transparent"
@@ -90,7 +90,7 @@ export default function Navbar() {
           <button
             onClick={() => scrollToSection("contact-us")}
             type="button"
-            className="text-white bg-[#c5b49a] hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-bold leading-5 rounded-lg text-sm px-3 py-2 focus:outline-none transition-all duration-300"
+            className="text-white bg-[#c5b49a] hover:bg-[#b4a389] box-border border border-transparent focus:ring-4 focus:ring-[#c5b49a]/30 shadow-lg font-bold leading-5 rounded-lg text-sm px-3 py-2 focus:outline-none transition-all duration-300"
           >
             GET STARTED
           </button>
@@ -100,7 +100,9 @@ export default function Navbar() {
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           type="button"
-          className="inline-flex items-center p-2 w-9 h-9 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary z-30"
+          className={`inline-flex items-center p-2 w-9 h-9 justify-center text-sm rounded-base md:hidden hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20 z-30 transition-colors ${
+            isScrolled ? "text-gray-800" : "text-white"
+          }`}
           aria-controls="navbar-cta"
           aria-expanded={isMenuOpen}
         >
@@ -128,13 +130,13 @@ export default function Navbar() {
           }`}
           id="navbar-cta"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-white/20 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
             <li>
               <Link
                 href="/"
                 className={`block py-2 px-3 text-l text-white ${
-                  isScrolled ? "md:text-black" : "md:text-black"
-                } rounded md:bg-transparent md:hover:text-fg-brand md:p-0 transition-colors duration-300`}
+                  isScrolled ? "md:text-gray-800" : "md:text-white"
+                } rounded md:bg-transparent md:hover:translate-y-[-2px] md:hover:scale-105   md:p-0 transition-colors duration-300`}
                 aria-current="page"
               >
                 HOME
@@ -143,9 +145,9 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => scrollToSection("about-us")}
-                className={`block py-2 px-3 text-heading text-l text-white ${
-                  isScrolled ? "md:text-black" : "md:text-black"
-                } rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 transition-colors duration-300 w-full text-left`}
+                className={`block py-2 px-3 text-l text-white ${
+                  isScrolled ? "md:text-gray-800" : "md:text-white"
+                } rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:translate-y-[-2px] md:hover:scale-105  md:p-0 transition-colors duration-300 w-full text-left`}
               >
                 ABOUT
               </button>
@@ -153,9 +155,9 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => scrollToSection("what-we-do")}
-                className={`block py-2 px-3 text-heading text-l text-white ${
-                  isScrolled ? "md:text-black" : "md:text-black"
-                } rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 transition-colors duration-300 w-full text-left`}
+                className={`block py-2 px-3 text-l text-white ${
+                  isScrolled ? "md:text-gray-800" : "md:text-white"
+                } rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:translate-y-[-2px] md:hover:scale-105  md:p-0 transition-colors duration-300 w-full text-left`}
               >
                 SERVICES
               </button>
@@ -163,9 +165,9 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => scrollToSection("our-work")}
-                className={`block py-2 px-3 text-heading text-l text-white ${
-                  isScrolled ? "md:text-black" : "md:text-black"
-                } rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 transition-colors duration-300 w-full text-left`}
+                className={`block py-2 px-3 text-l text-white ${
+                  isScrolled ? "md:text-gray-800" : "md:text-white"
+                } rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:translate-y-[-2px] md:hover:scale-105  md:p-0 transition-colors duration-300 w-full text-left`}
               >
                 PORTFOLIO
               </button>
@@ -173,29 +175,19 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className={`block py-2 px-3 text-heading text-l text-white ${
-                  isScrolled ? "md:text-black" : "md:text-black"
-                } rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 transition-colors duration-300 w-full text-left`}
+                className={`block py-2 px-3 text-l text-white ${
+                  isScrolled ? "md:text-gray-800" : "md:text-white"
+                } rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:translate-y-[-2px] md:hover:scale-105  md:p-0 transition-colors duration-300 w-full text-left`}
               >
                 TESTIMONIALS
               </button>
             </li>
-            {/* <li>
-              <button
-                onClick={() => scrollToSection("contact-us")}
-                className={`block py-2 px-3 text-heading text-l text-white ${
-                  isScrolled ? "md:text-black" : "md:text-black"
-                } rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 transition-colors duration-300 w-full text-left`}
-              >
-                CONTACT
-              </button>
-            </li> */}
             <li className="relative">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className={`flex text-white ${
-                  isScrolled ? "md:text-black" : "md:text-black"
-                } items-center justify-between w-full py-2 px-3 rounded font-medium text-l text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 transition-colors duration-300`}
+                  isScrolled ? "md:text-gray-800" : "md:text-white"
+                } items-center justify-between w-full py-2 px-3 rounded text-l md:w-auto hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:translate-y-[-2px] md:hover:scale-105  md:p-0 transition-colors duration-300`}
               >
                 PROJECTS
                 <svg
@@ -253,7 +245,7 @@ export default function Navbar() {
               <button
                 onClick={() => scrollToSection("contact-us")}
                 type="button"
-                className="w-full text-white bg-brand hover:bg-brand-strong border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 mt-2 focus:outline-none transition-all duration-300"
+                className="w-full text-white bg-[#c5b49a] hover:bg-[#b4a389] border border-transparent focus:ring-4 focus:ring-[#c5b49a]/30 shadow-lg leading-5 rounded-lg text-sm px-3 py-2 mt-2 focus:outline-none transition-all duration-300"
               >
                 Get Started
               </button>
