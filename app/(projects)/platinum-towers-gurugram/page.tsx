@@ -54,7 +54,7 @@ const projectDetails = {
   testimonial: {
     quote:
       "My experience with her, like, you know, there was a comfort level with her, her team, everybody, even small, small details, like curtains, anything, there's a warmth in our house. The most important thing about her is that it's not like a house, it's a home. When you enter, it gives a feeling you have come to your home, your abode. Very good, awesome. We love it, and there was a comfort level with her. She knew it. She was so confident about it. But finally, we are all very happy living in this house, and every day, I think, is the one thing I do is just remember her every day.",
-    author: "Praveen Nangia",
+    author: "Jyoti & Praveen Nangia",
     role: "Homeowners",
     image: "/PraveenNangiaTestimonialImage.jpg",
     clip: "/PraveenNangiaTestimonialClip.mp4",

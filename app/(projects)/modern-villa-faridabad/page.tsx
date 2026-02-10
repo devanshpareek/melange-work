@@ -54,7 +54,7 @@ const projectDetails = {
   testimonial: {
     quote:
       "We are in love with the space. Hi, my name is Shreya Gupta and working with Milans was a wonderful experience. Sangeeta ma'am truly understood each one of us and the interiors were done wonderfully. If you see us, you will understand what we mean because every furniture, every fabric, like really reflects us and the team also really understood us well.",
-    author: "Shreya Gupta",
+    author: "Gupta Residence",
     role: "Homeowners",
     image: images1[0].image,
     clip: "/AshishGuptaTestemonial.mp4",

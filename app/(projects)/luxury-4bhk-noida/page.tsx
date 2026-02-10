@@ -70,7 +70,7 @@ const projectDetails = {
   ],
   testimonial: {
     quote: "Testimonial content not found",
-    author: "Adarsh Aggarwal",
+    author: "Neha & Anant Aggarwal",
     role: "Homeowners",
     image: "not_found",
     clip: "not_found",

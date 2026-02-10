@@ -59,13 +59,14 @@ export default function Navbar() {
 
   // Project list
   const projects = [
+    { name: "Luxury Residence Interior", slug: "luxury-residence-interior" },
     { name: "Luxury 4BHK Noida", slug: "luxury-4bhk-noida" },
     { name: "Modern Villa Faridabad", slug: "modern-villa-faridabad" },
     { name: "Platinum Towers Gurugram", slug: "platinum-towers-gurugram" },
-    { name: "Deepali Enclave", slug: "deepali-enclave-pitampura" },
-    { name: "Ramlila Faridabad", slug: "ramlila-faridabad" },
-    { name: "Grand Estate Gurugram", slug: "grand-estate-gurugram" },
-    { name: "SEC 15 Noida", slug: "sec-15-noida" },
+    { name: "Deepali Enclave", slug: "deepali-enclave" },
+    { name: "Luxury Modern Penthouse", slug: "luxury-modern-penthouse" },
+    { name: "Luxury Penthouse", slug: "luxury-penthouse" },
+    { name: "Shivani & Bhuvam ", slug: "shivani-and-bhuvam" },
   ];
 
   return (
