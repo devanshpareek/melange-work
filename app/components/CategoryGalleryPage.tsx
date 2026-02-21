@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useCallback, memo } from "react";
+import React, { useState, useRef, useEffect, useCallback, memo, Suspense } from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { categoryWiseImages } from "../utils";
@@ -388,7 +388,7 @@ CategoryView.displayName = "CategoryView";
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function CategoryGalleryPage() {
+export function CategoryGalleryPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -559,5 +559,15 @@ export default function CategoryGalleryPage() {
         </div>
       </main>
     </>
+  );
+}
+
+export default function CategoryGalleryPage() {
+  return (
+    <Suspense
+      fallback={<main style={{ background: "#14100d", minHeight: "100vh" }} />}
+    >
+      <CategoryGalleryPageInner />
+    </Suspense>
   );
 }

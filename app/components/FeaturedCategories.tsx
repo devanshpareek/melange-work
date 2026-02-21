@@ -322,7 +322,7 @@ export default function FeaturedCategories() {
         {/* "See all work" footer link */}
         <div className="text-center py-14">
           <Link
-            href="/our-work"
+            href="/category"
             className="inline-flex items-center gap-3 group border"
             style={{
               textDecoration: "none",
