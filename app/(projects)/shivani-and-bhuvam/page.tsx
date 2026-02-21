@@ -57,25 +57,25 @@ const outdoorImages = [{ image: "/bhuvam6.jpg" }, { image: "/bhuvam7.jpg" }];
 
 export const projectDetails = {
   title: "Shivani & Bhuvam's Modern Penthouse",
-  subtitle: "A Contemporary Penthouse in Noida",
+  subtitle: "Independent house (3 floors + terrace) end to end project.",
   details: {
-    location: "Noida",
-    area: "3,200 sq ft",
-    duration: "9 months",
+    location: "Gurugram",
+    area: "4,500 sq ft",
+    duration: "12 months",
     year: "2023",
   },
   description: [
-    "3200SQ.FT penthouse for Aadarsh Aggarwal, a project that beautifully came together over 9 months.",
-    "We redesigned the ceilings to bring depth and mood into every room, updated the flooring for a seamless flow, crafted custom furniture that fits effortlessly into the layout, and tied it all together with soft, modern décor.",
-    "A refined, calm, and contemporary home where every detail matters.",
+    "Crafting a breathtaking 4500 sq ft independent house spanning three majestic floors was a testament to visionary design on a grand scale.",
+    "As their expert interior designer, we orchestrated every element—from soaring ceiling designs and premium flooring to stunning wall finishes, custom furniture, and seamless integration throughout.",
+    "The final masterpiece delivers timeless luxury, fluid flow between floors, and spaces that inspire awe and comfort in equal measure. This project showcases our passion for elevating homes into legacies of elegance.",
   ],
   features: [
-    "Redesigned ceilings with depth and mood lighting",
-    "Seamless flooring throughout the space",
-    "Custom-crafted furniture fitted to layout",
-    "Soft, modern décor elements",
-    "Contemporary design with refined aesthetics",
-    "Cohesive interior flow across 3200 sq.ft",
+    "4500 sq.ft independent house across three floors",
+    "Custom ceiling designs with architectural detail",
+    "Premium flooring throughout all levels",
+    "Stunning wall finishes and treatments",
+    "Bespoke furniture tailored to each space",
+    "Seamless flow and integration between floors",
   ],
   centerImage:
     "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800",
@@ -98,8 +98,9 @@ export const projectDetails = {
     },
   ],
   testimonial: {
-    quote: "",
-    author: "Adarsh & Shilpa Aggarwal",
+    quote:
+      "I recently had my home designed by 'Melange by Sangeeta Kapoor', and the results have completely transformed the space. From the initial consultation to the final reveal, their creativity, attention to detail, and understanding of my vision were outstanding. Every room now feels modern, functional, and perfectly tailored to my lifestyle—I'm receiving compliments from everyone who visits! I couldn't be happier and highly recommend them for anyone looking to elevate their home.",
+    author: "Shivani & Bhuvam",
     role: "Homeowners",
   },
 };

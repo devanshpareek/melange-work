@@ -13,6 +13,7 @@ import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
 import TestimonialVideosSection from "../components/HomePageTestimonialSection";
 import { useState } from "react";
+import FeaturedCategories from "./components/FeaturedCategories";
 
 const homePageCaraouselImgs = [
   "/Slider1.jpg",
@@ -314,6 +315,7 @@ export default function Home() {
         />
       </div>
       <div id="our-work">
+        <FeaturedCategories />
         <OurWork
           products={products1}
           centerImage={centerImage1}

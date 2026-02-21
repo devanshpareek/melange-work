@@ -182,14 +182,16 @@ export const ClientTestimonial = ({ testimonial }: { testimonial: any }) => {
 
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 bg-white backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12">
           {/* Quote Icon */}
-          <div className="w-full md:w-3/7 h-auto md:h-120 flex justify-center">
-            <img
-              className="rounded-xl"
-              src={testimonial.image}
-              alt="testimonial image not found"
-            />
-          </div>
-          <div className="md:w-4/7">
+          {testimonial.image && (
+            <div className="w-full md:w-3/7 h-auto md:h-120 flex justify-center">
+              <img
+                className="rounded-xl"
+                src={testimonial.image}
+                alt="testimonial image not found"
+              />
+            </div>
+          )}
+          <div className={`${testimonial.image ? "md:w-4/7" : "w-full"}`}>
             <svg
               className="w-16 h-16 text-[#6e6250]/60 mb-6"
               viewBox="0 0 24 24"

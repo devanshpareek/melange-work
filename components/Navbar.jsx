@@ -65,7 +65,7 @@ export default function Navbar() {
     { name: "Platinum Towers Gurugram", slug: "platinum-towers-gurugram" },
     { name: "Deepali Enclave", slug: "deepali-enclave" },
     { name: "Luxury Modern Penthouse", slug: "luxury-modern-penthouse" },
-    { name: "Luxury Penthouse", slug: "luxury-penthouse" },
+    // { name: "Luxury Penthouse", slug: "luxury-penthouse" },
     { name: "Shivani & Bhuvam ", slug: "shivani-and-bhuvam" },
   ];
 

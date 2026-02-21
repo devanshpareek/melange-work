@@ -100,36 +100,46 @@ export default function AboutUs({ showTitle = true }) {
 
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 <span className="text-2xl font-semibold text-gray-900">
-                  Sangeeta Kapoor
+                  Melange by Sangeeta Kapoor
                 </span>{" "}
-                has been designing homes for clients across India and the UK for
-                over twenty five years.
+                is a design studio built on the belief that a home should feel
+                as beautiful as it looks. Crafted with intention, personality,
+                and a deep understanding of how people live.
+              </p>
+
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                With a legacy of design and craftsmanship{" "}
+                <span className="font-semibold text-gray-900">since 1997</span>,
+                we've spent over 25 years creating homes that resonate with
+                warmth, comfort, and lasting elegance. Led by{" "}
+                <span className="font-semibold text-gray-900">
+                  Sangeeta Kapoor
+                </span>
+                , Melange has designed interiors for discerning clients across
+                India and the UK, blending thoughtful aesthetics with functional
+                living.
               </p>
 
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 From{" "}
                 <span className="font-semibold text-gray-900">
-                  bespoke furniture to complete interiors
+                  bespoke furniture crafted to lend warmth and elegance
                 </span>
-                , we create customized pieces that blend style, comfort, and
-                individuality. Every design is thoughtfully crafted to reflect
-                who you are -{" "}
-                <span className="font-semibold text-gray-900">
-                  timeless, elegant, and uniquely yours.
-                </span>
+                , to complete interior solutions built around comfort and
+                individuality, every project is driven by a passion for detail
+                and a commitment to bringing our clients' visions to life.
               </p>
 
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Her passion lies in building furniture that lends{" "}
+                At Melange, every project is an expression of the people who
+                inhabit it. Our process is rooted in{" "}
                 <span className="font-semibold text-gray-900">
-                  elegance, warmth, and comfort
+                  collaboration, refinement, and an appreciation for nuance
                 </span>{" "}
-                to a house.
-              </p>
-
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Her experience allows her to refine and implement her clients'
-                vision into beautiful and elegant living spaces.
+                — ensuring each space feels{" "}
+                <span className="font-semibold text-gray-900">
+                  uniquely yours.
+                </span>
               </p>
 
               {/* Decorative stats */}
