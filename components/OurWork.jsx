@@ -87,14 +87,14 @@ export default function OurWork({ products, centerImage, showTitle }) {
         {showTitle && (
           <div className="text-center mb-6">
             <h2 className="text-5xl md:text-6xl font-bold text-black mb-4 tracking-tight">
-              OUR WORK
+              OUR PROJECTS
             </h2>
             <div
               className="separation-line w-24 h-1 bg-gradient-to-b from-transparent via-zinc-400 to-transparent
  mx-auto mb-4"
             ></div>
             <p className="mini-title-desc text-xl text-black font-light">
-              A sample of our work
+              A sample of our projects that we have done for our clients.
             </p>
           </div>
         )}
