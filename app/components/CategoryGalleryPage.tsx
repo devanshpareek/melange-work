@@ -1,6 +1,13 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useCallback, memo, Suspense } from "react";
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  useCallback,
+  memo,
+  Suspense,
+} from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { categoryWiseImages } from "../utils";
@@ -469,6 +476,7 @@ export function CategoryGalleryPageInner() {
           background: "#14100d",
           minHeight: "100vh",
           fontFamily: "'Jost', sans-serif",
+          marginTop: "2rem",
         }}
       >
         {/* ── Hero ── */}
