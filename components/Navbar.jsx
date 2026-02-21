@@ -69,6 +69,8 @@ export default function Navbar() {
     { name: "Shivani & Bhuvam ", slug: "shivani-and-bhuvam" },
   ];
 
+  console.log(pathname, pathname.includes("/category"));
+
   return (
     <nav
       className={`fixed w-full z-50 backdrop-blur-md bg-[#c5b49a]/95 top-0 start-0 transition-all duration-300 ${
@@ -92,12 +94,11 @@ export default function Navbar() {
           <button
             onClick={() => scrollToSection("contact-us")}
             type="button"
-            className={
-              "text-white bg-[#c5b49a] hover:bg-[#b4a389] box-border border border-transparent focus:ring-4 focus:ring-[#c5b49a]/30 shadow-lg font-bold leading-5 rounded-lg text-sm px-3 py-2 focus:outline-none transition-all duration-300 " +
+            className={`bg-[#c5b49a] hover:bg-[#b4a389] box-border border border-transparent focus:ring-4 focus:ring-[#c5b49a]/30 shadow-lg font-bold leading-5 rounded-lg text-sm px-3 py-2 focus:outline-none transition-all duration-300 ${
               pathname.includes("/category")
                 ? "bg-white px-3 py-2 text-[#5c5242] hover:bg-gray-100 rounded-lg font-bold"
-                : ""
-            }
+                : "text-white"
+            }`}
           >
             GET STARTED
           </button>
