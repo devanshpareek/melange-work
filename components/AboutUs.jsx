@@ -1,66 +1,143 @@
 "use client";
+
 import { useState } from "react";
+import Image from "next/image";
 
 export default function AboutUs({ showTitle = true }) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <section
-      className={`relative bg-gradient-to-b from-white via-gray-200 to-white ${
-        showTitle ? "py-10" : "py-20"
-      } px-4 overflow-hidden`}
-    >
-      {/* Decorative background elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-purple-100 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-100 rounded-full blur-3xl opacity-30"></div>
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+      `}</style>
 
-      <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-            ABOUT US
-          </h2>
-          <div className="separation-line w-24 h-1 bg-gray-900 mx-auto"></div>
-        </div>
+      <section
+        className={`relative bg-gradient-to-b from-white via-gray-200 to-white ${
+          showTitle ? "py-10" : "py-20"
+        } px-4 overflow-hidden`}
+      >
+        <div className="relative max-w-7xl mx-auto">
+          {/* ── Section Header ── */}
+          {showTitle && (
+            <div className="text-center mb-16">
+              {/* Eyebrow */}
+              <p
+                className="text-xs tracking-[0.4em] uppercase mb-4"
+                style={{ color: "#a89880", fontFamily: "'Jost', sans-serif" }}
+              >
+                Our Studio
+              </p>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image Side */}
-          <div className="relative group">
-            {/* Decorative frame */}
-            <div className="absolute -inset-4 bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+              {/* Heading */}
+              <h2
+                className="font-light mb-4"
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+                  color: "#1a1410",
+                  letterSpacing: "-0.02em",
+                  lineHeight: 1.05,
+                }}
+              >
+                About{" "}
+                <span style={{ fontStyle: "italic", color: "#7c5c3e" }}>
+                  Us
+                </span>
+              </h2>
 
+              {/* Divider */}
+              <div
+                className="mx-auto"
+                style={{
+                  width: "3rem",
+                  height: "1px",
+                  background: "rgba(0,0,0,0.15)",
+                }}
+              />
+            </div>
+          )}
+
+          {/* ── Content Grid ── */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* ── Image Side ── */}
             <div className="relative">
-              {/* Image container with hover effect */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-3xl">
-                <img
-                  src={"/MariaDoe.jpg"}
+              {/* Image */}
+              <div
+                className="relative overflow-hidden"
+                style={{ aspectRatio: "3/4" }}
+              >
+                <Image
+                  src="/MariaDoe.jpg"
                   alt="Sangeeta Kapoor"
-                  className={`w-full h-150 object-cover transition-all duration-700 opacity-100 scale-100`}
+                  fill
+                  className="object-cover"
+                  style={{
+                    opacity: imageLoaded ? 1 : 0,
+                    transition:
+                      "opacity 0.6s ease, transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94)",
+                  }}
                   onLoad={() => setImageLoaded(true)}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.03)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.transform = "scale(1)")
+                  }
                 />
-
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
-              {/* Name card */}
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl px-8 py-4 min-w-[280px] text-center transform transition-all duration-500 group-hover:-translate-y-2">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  SANGEETA KAPOOR
+              {/* Name card — sits below image, flush left */}
+              <div
+                className="mt-6 pl-1"
+                style={{
+                  borderLeft: "2px solid rgba(124,92,62,0.4)",
+                  paddingLeft: "1rem",
+                }}
+              >
+                <h3
+                  className="font-light mb-1"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "clamp(1.4rem, 3vw, 1.8rem)",
+                    color: "#1a1410",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  Sangeeta Kapoor
                 </h3>
-                <p className="text-sm text-gray-600 mb-3">
-                  Interior Designer & Founder
+                <p
+                  className="text-xs tracking-[0.2em] uppercase"
+                  style={{ color: "#a89880", fontFamily: "'Jost', sans-serif" }}
+                >
+                  Interior Designer &amp; Founder
                 </p>
 
-                {/* Social Icons */}
-                <div className="flex items-center justify-center gap-4">
+                {/* Social links */}
+                <div className="flex items-center gap-3 mt-4">
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-900 flex items-center justify-center transition-all duration-300 group/icon"
+                    aria-label="Facebook"
+                    className="flex items-center justify-center transition-all duration-300"
+                    style={{
+                      width: "2.2rem",
+                      height: "2.2rem",
+                      border: "1px solid rgba(0,0,0,0.12)",
+                      color: "#5c4f42",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = "#1a1410";
+                      e.currentTarget.style.borderColor = "#1a1410";
+                      e.currentTarget.style.color = "#fff";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = "transparent";
+                      e.currentTarget.style.borderColor = "rgba(0,0,0,0.12)";
+                      e.currentTarget.style.color = "#5c4f42";
+                    }}
                   >
                     <svg
-                      className="w-5 h-5 text-gray-900 group-hover/icon:text-white transition-colors"
+                      className="w-4 h-4"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -69,10 +146,27 @@ export default function AboutUs({ showTitle = true }) {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-900 flex items-center justify-center transition-all duration-300 group/icon"
+                    aria-label="Instagram"
+                    className="flex items-center justify-center transition-all duration-300"
+                    style={{
+                      width: "2.2rem",
+                      height: "2.2rem",
+                      border: "1px solid rgba(0,0,0,0.12)",
+                      color: "#5c4f42",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = "#1a1410";
+                      e.currentTarget.style.borderColor = "#1a1410";
+                      e.currentTarget.style.color = "#fff";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = "transparent";
+                      e.currentTarget.style.borderColor = "rgba(0,0,0,0.12)";
+                      e.currentTarget.style.color = "#5c4f42";
+                    }}
                   >
                     <svg
-                      className="w-5 h-5 text-gray-900 group-hover/icon:text-white transition-colors"
+                      className="w-4 h-4"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -82,24 +176,36 @@ export default function AboutUs({ showTitle = true }) {
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Text Side */}
-          <div className="relative">
-            {/* Quote decoration */}
-            <div className="absolute -top-8 -left-8 text-8xl text-gray-200 font-serif leading-none">
-              "
-            </div>
+            {/* ── Text Side ── */}
+            <div className="space-y-6">
+              {/* Eyebrow badge — replaces the gradient pill */}
+              <span
+                className="text-xs tracking-[0.35em] uppercase block mb-2"
+                style={{ color: "#a89880", fontFamily: "'Jost', sans-serif" }}
+              >
+                A legacy of design and craftsmanship since{" "}
+                <span style={{ color: "#7c5c3e" }}>1997</span>
+              </span>
 
-            <div className="relative z-10 space-y-6">
-              <div className="inline-block mb-4">
-                <div className="bg-gradient-to-r from-gray-900 to-gray-700 text-white px-6 py-3 rounded-full text-sm font-semibold tracking-wide shadow-lg">
-                  A legacy of design and craftsmanship since 1997
-                </div>
-              </div>
-
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                <span className="text-2xl font-semibold text-gray-900">
+              {/* Paragraphs */}
+              <p
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "'Jost', sans-serif",
+                  fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
+                  color: "#5c4f42",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "clamp(1.3rem, 2.5vw, 1.6rem)",
+                    fontWeight: 400,
+                    color: "#1a1410",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
                   Melange by Sangeeta Kapoor
                 </span>{" "}
                 is a design studio built on the belief that a home should feel
@@ -107,12 +213,21 @@ export default function AboutUs({ showTitle = true }) {
                 and a deep understanding of how people live.
               </p>
 
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "'Jost', sans-serif",
+                  fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
+                  color: "#5c4f42",
+                }}
+              >
                 With a legacy of design and craftsmanship{" "}
-                <span className="font-semibold text-gray-900">since 1997</span>,
-                we've spent over 25 years creating homes that resonate with
+                <span style={{ color: "#1a1410", fontWeight: 500 }}>
+                  since 1997
+                </span>
+                , we've spent over 25 years creating homes that resonate with
                 warmth, comfort, and lasting elegance. Led by{" "}
-                <span className="font-semibold text-gray-900">
+                <span style={{ color: "#1a1410", fontWeight: 500 }}>
                   Sangeeta Kapoor
                 </span>
                 , Melange has designed interiors for discerning clients across
@@ -120,9 +235,16 @@ export default function AboutUs({ showTitle = true }) {
                 living.
               </p>
 
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "'Jost', sans-serif",
+                  fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
+                  color: "#5c4f42",
+                }}
+              >
                 From{" "}
-                <span className="font-semibold text-gray-900">
+                <span style={{ color: "#1a1410", fontWeight: 500 }}>
                   bespoke furniture crafted to lend warmth and elegance
                 </span>
                 , to complete interior solutions built around comfort and
@@ -130,70 +252,50 @@ export default function AboutUs({ showTitle = true }) {
                 and a commitment to bringing our clients' visions to life.
               </p>
 
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "'Jost', sans-serif",
+                  fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
+                  color: "#5c4f42",
+                }}
+              >
                 At Melange, every project is an expression of the people who
                 inhabit it. Our process is rooted in{" "}
-                <span className="font-semibold text-gray-900">
+                <span style={{ color: "#1a1410", fontWeight: 500 }}>
                   collaboration, refinement, and an appreciation for nuance
                 </span>{" "}
                 — ensuring each space feels{" "}
-                <span className="font-semibold text-gray-900">
+                <span style={{ color: "#1a1410", fontWeight: 500 }}>
                   uniquely yours.
                 </span>
               </p>
 
-              {/* Decorative stats */}
-              {/* <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
-                <div>
-                  <div className="text-4xl font-bold text-gray-900 mb-1">
-                    15+
-                  </div>
-                  <div className="text-sm text-gray-600 uppercase tracking-wide">
-                    Years Experience
-                  </div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-gray-900 mb-1">2</div>
-                  <div className="text-sm text-gray-600 uppercase tracking-wide">
-                    Countries
-                  </div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-gray-900 mb-1">
-                    20
-                  </div>
-                  <div className="text-sm text-gray-600 uppercase tracking-wide">
-                    Cities
-                  </div>
-                </div>
-              </div> */}
+              {/* Divider */}
+              <div
+                className="pt-2"
+                style={{
+                  width: "3rem",
+                  height: "1px",
+                  background: "rgba(0,0,0,0.15)",
+                }}
+              />
 
-              {/* CTA Button */}
-              {/* <div className="pt-6">
-                <button className="group relative px-8 py-4 bg-gray-900 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                  <span className="relative z-10 flex items-center gap-2">
-                    View Portfolio
-                    <svg
-                      className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
-              </div> */}
+              {/* Tagline in Cormorant italic */}
+              <p
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontStyle: "italic",
+                  fontSize: "clamp(1.1rem, 2vw, 1.3rem)",
+                  color: "#7c5c3e",
+                }}
+              >
+                Timeless, elegant, and uniquely yours.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

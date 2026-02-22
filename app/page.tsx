@@ -310,7 +310,7 @@ export default function Home() {
       <div id="what-we-do">
         <WhatWeDo
           services={services}
-          title={"WHAT WE DO"}
+          title={"What We Do"}
           description={"Everything to turn your house into a home"}
         />
       </div>
@@ -356,17 +356,43 @@ export default function Home() {
         <div className="flex justify-center py-12">
           <button
             onClick={handleToggleProjects}
-            className="group relative px-8 py-4 bg-[#c5b49a] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
+            className="group inline-flex items-center gap-3"
+            style={{ textDecoration: "none" }}
           >
-            <span className="text-lg">
+            <span
+              className="text-xs tracking-[0.3em] uppercase border px-6 py-3"
+              style={{
+                color: "#7c5c3e",
+                borderColor: "rgba(124,92,62,0.45)",
+                fontFamily: "'Jost', sans-serif",
+                transition:
+                  "background 0.25s ease, color 0.25s ease, border-color 0.25s ease",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLSpanElement).style.background =
+                  "#1a1410";
+                (e.currentTarget as HTMLSpanElement).style.color = "#ffffff";
+                (e.currentTarget as HTMLSpanElement).style.borderColor =
+                  "#1a1410";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLSpanElement).style.background =
+                  "transparent";
+                (e.currentTarget as HTMLSpanElement).style.color = "#7c5c3e";
+                (e.currentTarget as HTMLSpanElement).style.borderColor =
+                  "rgba(124,92,62,0.45)";
+              }}
+            >
               {showMoreProjects
                 ? "View Less Projects"
                 : "Explore More Projects"}
             </span>
             <svg
-              className={`w-5 h-5 transition-transform duration-300 ${
-                showMoreProjects ? "rotate-180" : ""
-              }`}
+              className="w-4 h-4 transition-transform duration-300"
+              style={{
+                color: "#7c5c3e",
+                transform: showMoreProjects ? "rotate(180deg)" : "rotate(0deg)",
+              }}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -374,7 +400,7 @@ export default function Home() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
+                strokeWidth={1.5}
                 d="M19 9l-7 7-7-7"
               />
             </svg>
@@ -385,7 +411,7 @@ export default function Home() {
 
         <OurProcess
           services={steps}
-          title={"THE PROCESS"}
+          title={"The Process"}
           description={"How we work"}
         />
         <FunFacts />

@@ -1,4 +1,5 @@
 import OurWork, { ImageCard } from "@/components/OurWork";
+import Image from "next/image";
 import React from "react";
 
 const images1 = [
@@ -82,152 +83,335 @@ export const project1 = {
 
 export const ProjectDescription = ({ project }: { project: any }) => {
   return (
-    <div className="bg-gradient-to-b from-white via-gray-200 to-white py-16 px-4 mt-15">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {project.title}
-          </h2>
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+      `}</style>
+
+      <div className="bg-gradient-to-b from-white via-gray-200 to-white py-16 px-4 mt-15">
+        <div className="max-w-4xl mx-auto">
+          {/* ── Header ── */}
+          <div className="text-center mb-10">
+            {/* Title */}
+            <h2
+              className="font-light mb-3"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "clamp(2rem, 5vw, 3.5rem)",
+                color: "#1a1410",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.05,
+              }}
+            >
+              {project.title}
+            </h2>
+
+            {/* Divider */}
+            <div
+              className="mx-auto mb-4"
+              style={{
+                width: "3rem",
+                height: "1px",
+                background: "rgba(0,0,0,0.15)",
+              }}
+            />
+
+            {/* Subtitle */}
+            <p
+              className="text-sm md:text-base leading-relaxed"
+              style={{ color: "#5c4f42", fontFamily: "'Jost', sans-serif" }}
+            >
+              {project.subtitle}
+            </p>
+          </div>
+
+          {/* ── Project details grid ── */}
           <div
-            className="separation-line w-24 h-1 bg-gradient-to-b from-transparent via-zinc-400 to-transparent
- mx-auto mb-4"
-          ></div>
-          <p className="mini-title-desc text-lg text-gray-600">
-            {project.subtitle}
-          </p>
-        </div>
+            className="grid grid-cols-2 md:grid-cols-3 gap-0 mb-10"
+            style={{
+              borderTop: "1px solid rgba(0,0,0,0.08)",
+              borderBottom: "1px solid rgba(0,0,0,0.08)",
+            }}
+          >
+            {[
+              { value: project.details.location, label: "Location" },
+              { value: project.details.area, label: "Area" },
+              { value: project.details.duration, label: "Duration" },
+            ].map(({ value, label }, i) => (
+              <div
+                key={i}
+                className="text-center py-7"
+                style={{
+                  borderRight: i < 2 ? "1px solid rgba(0,0,0,0.08)" : undefined,
+                }}
+              >
+                <div
+                  className="mb-1 font-light"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "clamp(1.3rem, 3vw, 1.8rem)",
+                    color: "#1a1410",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  {value}
+                </div>
+                <div
+                  className="text-xs tracking-[0.25em] uppercase"
+                  style={{ color: "#a89880", fontFamily: "'Jost', sans-serif" }}
+                >
+                  {label}
+                </div>
+              </div>
+            ))}
+          </div>
 
-        {/* Project Details Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8 py-8 border-y border-gray-200">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-[#6e6250] mb-1">
-              {project.details.location}
-            </div>
-            <div className="text-sm text-gray-600 uppercase tracking-wide">
-              Location
-            </div>
+          {/* ── Description paragraphs ── */}
+          <div className="space-y-5 mb-10">
+            {project.description.map((paragraph: string, index: number) => (
+              <p
+                key={index}
+                className="text-sm md:text-base leading-relaxed"
+                style={{ color: "#5c4f42", fontFamily: "'Jost', sans-serif" }}
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-[#6e6250] mb-1">
-              {project.details.area}
-            </div>
-            <div className="text-sm text-gray-600 uppercase tracking-wide">
-              Area
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-[#6e6250] mb-1">
-              {project.details.duration}
-            </div>
-            <div className="text-sm text-gray-600 uppercase tracking-wide">
-              Duration
-            </div>
-          </div>
-        </div>
 
-        {/* Project Description */}
-        <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-          {project.description.map((paragraph: any, index: any) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </div>
+          {/* ── Key features ── */}
+          {project.features && (
+            <div
+              className="p-8"
+              style={{
+                border: "1px solid rgba(0,0,0,0.08)",
+                background: "rgba(255,255,255,0.6)",
+              }}
+            >
+              {/* Features heading */}
+              <h3
+                className="font-light mb-2"
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: "clamp(1.4rem, 3vw, 2rem)",
+                  color: "#1a1410",
+                  letterSpacing: "-0.01em",
+                }}
+              >
+                Key{" "}
+                <span style={{ fontStyle: "italic", color: "#7c5c3e" }}>
+                  Features
+                </span>
+              </h3>
 
-        {/* Key Features */}
-        {project.features && (
-          <div className="mt-8 bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Key Features
-            </h3>
-            <ul className="grid md:grid-cols-2 gap-3">
-              {project.features.map((feature: any, index: any) => (
-                <li key={index} className="flex items-start gap-3">
-                  <svg
-                    className="w-6 h-6 text-gray-900 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+              {/* Divider */}
+              <div
+                className="mb-6"
+                style={{
+                  width: "2rem",
+                  height: "1px",
+                  background: "rgba(0,0,0,0.15)",
+                }}
+              />
+
+              <ul className="grid md:grid-cols-2 gap-3">
+                {project.features.map((feature: string, index: number) => (
+                  <li key={index} className="flex items-start gap-3">
+                    {/* Check icon */}
+                    <svg
+                      className="w-4 h-4 flex-shrink-0 mt-0.5"
+                      style={{ color: "#7c5c3e" }}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.5"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      className="text-sm md:text-base leading-relaxed"
+                      style={{
+                        color: "#5c4f42",
+                        fontFamily: "'Jost', sans-serif",
+                      }}
+                    >
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-// Client Testimonial Component
+// ─── ClientTestimonial ────────────────────────────────────────────────────────
+
 export const ClientTestimonial = ({ testimonial }: { testimonial: any }) => {
+  console.log(testimonial.image);
   return (
-    <div className="bg-gradient-to-b from-white via-gray-200 to-white py-16 px-4">
-      <div className="mx-10">
-        <div className="text-center mb-8">
-          <h3 className="text-3xl font-bold text-[#6e6250] mb-2">
-            Client Testimonial
-          </h3>
-          <div
-            className="separation-line w-24 h-1 bg-gradient-to-b from-transparent via-zinc-400 to-transparent
- mx-auto mb-4"
-          ></div>
-        </div>
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+      `}</style>
 
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 bg-white backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12">
-          {/* Quote Icon */}
-          {testimonial.image && (
-            <div className="w-full md:w-3/7 h-auto md:h-120 flex justify-center">
-              <img
-                className="rounded-xl"
-                src={testimonial.image}
-                alt="testimonial image not found"
-              />
-            </div>
-          )}
-          <div className={`${testimonial.image ? "md:w-4/7" : "w-full"}`}>
-            <svg
-              className="w-16 h-16 text-[#6e6250]/60 mb-6"
-              viewBox="0 0 24 24"
-              fill="currentColor"
+      <div className="bg-gradient-to-b from-white via-gray-200 to-white py-16 px-4">
+        <div className="mx-10">
+          {/* ── Header ── */}
+          <div className="text-center mb-10">
+            <p
+              className="text-xs tracking-[0.4em] uppercase mb-4"
+              style={{ color: "#a89880", fontFamily: "'Jost', sans-serif" }}
             >
-              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
-            </svg>
-
-            {/* Quote */}
-            <p className="text-xl md:text-2xl text-[#6e6250] leading-relaxed mb-8 italic">
-              "{testimonial.quote}"
+              Testimonial
             </p>
+            <h3
+              className="font-light mb-4"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "clamp(2rem, 5vw, 3.5rem)",
+                color: "#1a1410",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.05,
+              }}
+            >
+              Client{" "}
+              <span style={{ fontStyle: "italic", color: "#7c5c3e" }}>
+                Voice
+              </span>
+            </h3>
+            <div
+              className="mx-auto"
+              style={{
+                width: "3rem",
+                height: "1px",
+                background: "rgba(0,0,0,0.15)",
+              }}
+            />
+          </div>
 
-            {/* Author */}
-            <div className="flex items-center gap-4">
-              {testimonial.avatar && (
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.author}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
+          {/* ── Card ── */}
+          <div
+            className="flex flex-col md:flex-row gap-8 md:gap-12 p-8 md:p-12"
+            style={{
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "rgba(255,255,255,0.6)",
+            }}
+          >
+            {/* Optional image */}
+            {testimonial.image && (
+              <div
+                className="w-full md:w-3/7 relative"
+                style={{ minHeight: "320px" }}
+              >
+                <Image
+                  src={"/" + testimonial.image}
+                  alt="Testimonial"
+                  fill
+                  className="object-cover"
                 />
-              )}
-              <div>
-                <h4 className="text-lg font-bold text-[#6e6250]">
-                  {testimonial.author}
-                </h4>
-                <p className="text-gray-400">{testimonial.role}</p>
+              </div>
+            )}
+
+            <div
+              className={`${
+                testimonial.image ? "md:w-4/7" : "w-full"
+              } flex flex-col justify-center`}
+            >
+              {/* Large quote mark */}
+              <svg
+                className="mb-6"
+                style={{
+                  width: "3rem",
+                  height: "3rem",
+                  color: "rgba(124,92,62,0.3)",
+                }}
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+              </svg>
+
+              {/* Quote */}
+              <p
+                className="leading-relaxed mb-8"
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: "clamp(1.15rem, 2.5vw, 1.5rem)",
+                  fontStyle: "italic",
+                  color: "#1a1410",
+                  letterSpacing: "0.01em",
+                }}
+              >
+                &ldquo;{testimonial.quote}&rdquo;
+              </p>
+
+              {/* Divider */}
+              <div
+                className="mb-6"
+                style={{
+                  width: "3rem",
+                  height: "1px",
+                  background: "rgba(0,0,0,0.15)",
+                }}
+              />
+
+              {/* Author */}
+              <div className="flex items-center gap-4">
+                {testimonial.avatar && (
+                  <div
+                    className="relative flex-shrink-0 overflow-hidden"
+                    style={{
+                      width: "3.5rem",
+                      height: "3.5rem",
+                      border: "1px solid rgba(0,0,0,0.08)",
+                    }}
+                  >
+                    <Image
+                      src={testimonial.avatar}
+                      alt={testimonial.author}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div>
+                  <h4
+                    className="font-light mb-0.5"
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontSize: "clamp(1.1rem, 2vw, 1.3rem)",
+                      color: "#1a1410",
+                      letterSpacing: "-0.01em",
+                    }}
+                  >
+                    {testimonial.author}
+                  </h4>
+                  <p
+                    className="text-xs tracking-[0.2em] uppercase"
+                    style={{
+                      color: "#a89880",
+                      fontFamily: "'Jost', sans-serif",
+                    }}
+                  >
+                    {testimonial.role}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
-
 const page = () => {
   return (
     <div>

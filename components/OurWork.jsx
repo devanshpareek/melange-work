@@ -85,20 +85,44 @@ export default function OurWork({ products, centerImage, showTitle }) {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         {showTitle && (
-          <div className="text-center mb-6">
-            <h2 className="text-5xl md:text-6xl font-bold text-black mb-4 tracking-tight">
-              OUR PROJECTS
+          <div className="text-center mb-14">
+            <p
+              className="text-xs tracking-[0.4em] uppercase mb-4"
+              style={{ color: "#a89880", fontFamily: "'Jost', sans-serif" }}
+            >
+              Portfolio
+            </p>
+            <h2
+              className="font-light mb-4"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+                color: "#1a1410",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.05,
+              }}
+            >
+              Our{" "}
+              <span style={{ fontStyle: "italic", color: "#7c5c3e" }}>
+                Projects
+              </span>
             </h2>
             <div
-              className="separation-line w-24 h-1 bg-gradient-to-b from-transparent via-zinc-400 to-transparent
- mx-auto mb-4"
-            ></div>
-            <p className="mini-title-desc text-xl text-black font-light">
+              className="mx-auto mb-6"
+              style={{
+                width: "3rem",
+                height: "1px",
+                background: "rgba(0,0,0,0.15)",
+              }}
+            />
+            <p
+              className="max-w-xl mx-auto text-sm md:text-base leading-relaxed"
+              style={{ color: "#5c4f42", fontFamily: "'Jost', sans-serif" }}
+            >
               A sample of our projects that we have done for our clients.
             </p>
           </div>
         )}
-
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
           {/* Left Column - 2 Images */}

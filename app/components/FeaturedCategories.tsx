@@ -4,19 +4,6 @@ import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// ─── Palette (light mode) ─────────────────────────────────────────────────────
-//
-//  background  : white → gray-200 → white  (Tailwind gradient)
-//  heading     : #1a1410  (deep warm charcoal)
-//  tagline     : #7c5c3e  (warm brown — replaces gold-on-dark)
-//  body text   : #5c4f42  (mid warm brown-gray)
-//  index / muted : #a89880
-//  divider     : rgba(0,0,0,0.1)
-//  border      : rgba(0,0,0,0.1)
-//  CTA border  : #7c5c3e
-//  CTA hover bg: #1a1410  /  CTA hover text: white
-//  image overlay: white-fade (instead of dark-fade)
-
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface FeaturedCategory {
@@ -100,7 +87,8 @@ const FeaturedRow = ({
   return (
     <div
       ref={ref}
-      className="grid md:grid-cols-2 gap-0"
+      // md:items-stretch ensures image cell always matches text block height on desktop
+      className="grid md:grid-cols-2 md:items-stretch gap-0"
       style={{
         opacity: inView ? 1 : 0,
         transform: inView ? "translateY(0)" : "translateY(40px)",
@@ -110,7 +98,7 @@ const FeaturedRow = ({
     >
       {/* ── Text block ── */}
       <div
-        className={`flex flex-col justify-center px-8 py-14 md:px-16 md:py-20 ${
+        className={`flex flex-col justify-center px-8 py-10 md:px-16 md:py-20 ${
           imageLeft ? "md:order-2" : "md:order-1"
         }`}
         style={{ background: "transparent" }}
@@ -181,9 +169,10 @@ const FeaturedRow = ({
             className="text-xs tracking-[0.3em] uppercase border px-5 py-2.5"
             style={{
               color: "#7c5c3e",
-
+              borderColor: "rgba(124,92,62,0.45)",
               fontFamily: "'Jost', sans-serif",
-              transition: "background 0.25s ease, color 0.25s ease",
+              transition:
+                "background 0.25s ease, color 0.25s ease, border-color 0.25s ease",
             }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLSpanElement).style.background = "#1a1410";
@@ -211,11 +200,15 @@ const FeaturedRow = ({
       </div>
 
       {/* ── Image block ── */}
+      {/*
+        Mobile : h-[280px] gives a fixed visible height when stacked vertically
+        Desktop: md:h-auto lets the grid row (driven by text block) set the height;
+                 Next.js <Image fill> uses absolute inset-0 so it fills whatever height the cell has
+      */}
       <div
-        className={`relative overflow-hidden ${
+        className={`relative overflow-hidden h-[280px] md:h-auto ${
           imageLeft ? "md:order-1" : "md:order-2"
         }`}
-        style={{ minHeight: "420px", aspectRatio: "4/3" }}
       >
         <Image
           src={item.image}
@@ -235,7 +228,7 @@ const FeaturedRow = ({
           }}
         />
 
-        {/* Light gradient overlay — fades image edge into the white bg */}
+        {/* Subtle gradient overlay fading image edge into background */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{

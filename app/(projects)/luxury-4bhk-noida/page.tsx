@@ -116,8 +116,8 @@ const page = () => {
         products={images4}
       />
 
-      <ClientTestimonial testimonial={projectDetails.testimonial} />
-      <TestimonialVideo video={projectDetails.testimonial.clip} />
+      {/* <ClientTestimonial testimonial={projectDetails.testimonial} />
+      <TestimonialVideo video={projectDetails.testimonial.clip} /> */}
       <InstagramReels reels={reelsData} />
     </div>
   );
