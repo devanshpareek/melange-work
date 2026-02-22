@@ -111,6 +111,7 @@ const projectDetails = {
     role: "Homeowners",
     image: "SashiAggarwalTestimonial.jpg",
     clip: "SashiAggarwalTestimonialVideo.mp4",
+    thumbnail: "SashiAggarwalTestimonialThumbnail.png",
   },
 };
 
@@ -171,7 +172,10 @@ const page = () => {
       />
 
       <ClientTestimonial testimonial={projectDetails.testimonial} />
-      <TestimonialVideo video={projectDetails.testimonial.clip} />
+      <TestimonialVideo
+        thumbnail={projectDetails.testimonial.thumbnail}
+        video={projectDetails.testimonial.clip}
+      />
       {/* <InstagramReels reels={reelsData} /> */}
     </div>
   );

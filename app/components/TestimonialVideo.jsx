@@ -1,7 +1,8 @@
 // components/TestimonialVideo.tsx
 import React from "react";
 
-const TestimonialVideo = ({ video }) => {
+const TestimonialVideo = ({ video, thumbnail }) => {
+  console.log(video);
   return (
     <>
       <style>{`
@@ -77,6 +78,7 @@ const TestimonialVideo = ({ video }) => {
                     className="absolute top-0 left-0 w-full h-full object-cover"
                     controls
                     preload="metadata"
+                    poster={thumbnail}
                   >
                     <source src={video} type="video/mp4" />
                     Your browser does not support the video tag.

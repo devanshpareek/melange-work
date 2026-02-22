@@ -271,18 +271,21 @@ const testimonialVideos = [
     clientName: "Shreya Gupta",
     projectDetails:
       "Independent house (3 floors + terrace) end to end project, Faridabad.",
+    thumbnail: "/AshishGuptaTestemonialThumbnail.png",
   },
   {
     url: "/PraveenNangiaTestimonialClip.mp4",
     clientName: "Praveen Nangia",
     projectDetails:
       "4 BHK apartment in Gurugram with contemporary design, Gurugram.",
+    thumbnail: "/PraveenNangiaTestimonialThumbnail.png",
   },
   {
     url: "SashiAggarwalTestimonialVideo.mp4",
     clientName: "Sashi Aggarwal",
     projectDetails:
       "Independent house (3 floors + terrace) end to end project, Gurugram.",
+    thumbnail: "/SashiAggarwalTestimonialThumbnail.png",
   },
 ];
 

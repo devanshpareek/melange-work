@@ -140,6 +140,7 @@ const VideoCard = ({ video, index }: { video: Video; index: number }) => {
           className="absolute top-0 left-0 w-full h-full object-cover"
           controls
           preload="metadata"
+          poster={video.thumbnail}
           onPlay={(e) => {
             e.currentTarget
               .closest(".video-card")

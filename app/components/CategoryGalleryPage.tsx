@@ -1,13 +1,6 @@
 "use client";
 
-import React, {
-  useState,
-  useRef,
-  useEffect,
-  useCallback,
-  memo,
-  Suspense,
-} from "react";
+import React, { useState, useRef, useEffect, useCallback, memo } from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { categoryWiseImages } from "../utils";
@@ -394,8 +387,12 @@ const CategoryView = memo(
 CategoryView.displayName = "CategoryView";
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
+// Wrapped in Suspense because useSearchParams() requires it during static build.
+// Without this Next.js throws a prerender error on build.
 
-export function CategoryGalleryPageInner() {
+import { Suspense } from "react";
+
+function CategoryGalleryPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -475,8 +472,8 @@ export function CategoryGalleryPageInner() {
         style={{
           background: "#14100d",
           minHeight: "100vh",
-          fontFamily: "'Jost', sans-serif",
           marginTop: "2rem",
+          fontFamily: "'Jost', sans-serif",
         }}
       >
         {/* ── Hero ── */}
@@ -515,14 +512,37 @@ export function CategoryGalleryPageInner() {
 
         {/* ── Sticky Category Nav ── */}
         <div
-          className="sticky top-0 z-30 px-6 md:px-16 lg:px-24 py-4 overflow-x-auto"
+          className="sticky top-0 z-30 px-4 md:px-16 lg:px-24 py-3 md:py-4"
           style={{
             background: "rgba(20,16,13,0.92)",
             backdropFilter: "blur(12px)",
             borderBottom: "1px solid rgba(201,185,154,0.12)",
           }}
         >
-          <div className="flex items-center gap-2 md:gap-3 min-w-max">
+          {/* Mobile: 3-column grid so all categories are visible at once */}
+          {/* Desktop: single row flex */}
+          <div className="grid grid-cols-3 gap-1.5 md:hidden">
+            {CATEGORIES.map((cat) => {
+              const isActive = activeCategoryId === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  className="cat-pill py-2 px-1 text-[10px] tracking-widest uppercase border text-center leading-tight"
+                  style={{
+                    color: isActive ? "#14100d" : "#9a8a75",
+                    background: isActive ? "#c9b99a" : "transparent",
+                    borderColor: isActive ? "#c9b99a" : "rgba(201,185,154,0.3)",
+                  }}
+                  onClick={() => handleCategorySwitch(cat.id)}
+                >
+                  {cat.label}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Desktop: horizontal row */}
+          <div className="hidden md:flex items-center gap-3 overflow-x-auto">
             {CATEGORIES.map((cat) => {
               const isActive = activeCategoryId === cat.id;
               return (
