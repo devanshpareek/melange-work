@@ -113,7 +113,7 @@ const VideoCard = ({ video, index }: { video: Video; index: number }) => {
       </div>
 
       {/* Play overlay — hides when video plays via CSS (.video-card:hover .play-overlay) */}
-      <div className="play-overlay absolute inset-0 flex items-center justify-center z-10 pointer-events-none transition-opacity duration-300">
+      {/* <div className="play-overlay absolute inset-0 flex items-center justify-center z-10 pointer-events-none transition-opacity duration-300">
         <div
           className="flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
           style={{
@@ -132,7 +132,7 @@ const VideoCard = ({ video, index }: { video: Video; index: number }) => {
             <path d="M8 5v14l11-7z" />
           </svg>
         </div>
-      </div>
+      </div> */}
 
       {/* Video — 9:16 aspect ratio */}
       <div className="relative" style={{ paddingBottom: "177.78%" }}>
