@@ -19,7 +19,6 @@ const TestimonialVideosSection = ({ videos }: { videos: Video[] }) => {
 
       <section className="relative bg-gradient-to-b from-white via-gray-200 to-white py-20 px-4 overflow-hidden">
         <div className="relative max-w-6xl mx-auto">
-
           {/* ── Header ── */}
           <div className="text-center mb-14">
             <p
@@ -45,7 +44,11 @@ const TestimonialVideosSection = ({ videos }: { videos: Video[] }) => {
             </h2>
             <div
               className="mx-auto mb-6"
-              style={{ width: "3rem", height: "1px", background: "rgba(0,0,0,0.15)" }}
+              style={{
+                width: "3rem",
+                height: "1px",
+                background: "rgba(0,0,0,0.15)",
+              }}
             />
             <p
               className="max-w-xl mx-auto text-sm md:text-base leading-relaxed"
@@ -78,11 +81,14 @@ const VideoCard = ({ video, index }: { video: Video; index: number }) => {
         transition: "border-color 0.3s ease, box-shadow 0.3s ease",
       }}
       onMouseEnter={(e) => {
-        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(124,92,62,0.35)";
-        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.1)";
+        (e.currentTarget as HTMLDivElement).style.borderColor =
+          "rgba(124,92,62,0.35)";
+        (e.currentTarget as HTMLDivElement).style.boxShadow =
+          "0 8px 32px rgba(0,0,0,0.1)";
       }}
       onMouseLeave={(e) => {
-        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(0,0,0,0.08)";
+        (e.currentTarget as HTMLDivElement).style.borderColor =
+          "rgba(0,0,0,0.08)";
         (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
       }}
     >
@@ -152,19 +158,17 @@ const VideoCard = ({ video, index }: { video: Video; index: number }) => {
         </video>
       </div>
 
-      {/* Client info — bottom overlay */}
+      {/* Client info — sits BELOW the video, outside it, so controls don't collide */}
       <div
-        className="absolute bottom-0 left-0 right-0 p-5 pt-10"
-        style={{
-          background: "linear-gradient(to top, rgba(20,16,13,0.92) 0%, rgba(20,16,13,0.5) 60%, transparent 100%)",
-        }}
+        className="px-5 py-4"
+        style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}
       >
         <h3
-          className="font-light mb-1"
+          className="font-light mb-0.5"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
-            color: "#f5efe6",
+            fontSize: "clamp(1.1rem, 2.5vw, 1.3rem)",
+            color: "#1a1410",
             letterSpacing: "-0.01em",
           }}
         >
