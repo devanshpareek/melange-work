@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
           )}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2833145959916!2d77.08814631508236!3d28.476816182470846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x6176e37f0e067ae!2sMelange!5e0!3m2!1sen!2sin!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3507.072241339083!2d77.10036807549511!3d28.47737097574974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI4JzM4LjUiTiA3N8KwMDYnMTAuNiJF!5e0!3m2!1sen!2sin!4v1772560713338!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -136,32 +136,10 @@ export default function Footer() {
                 {/* Section label */}
                 <p
                   className="text-xs tracking-[0.4em] uppercase mb-4"
-                  style={{ color: "#a89880", fontFamily: "'Jost', sans-serif" }}
+                  style={{ color: "#5c4f42", fontFamily: "'Jost', sans-serif" }}
                 >
                   Get In Touch
                 </p>
-
-                <h2
-                  className="font-light mb-4"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: "clamp(1.4rem, 3vw, 2rem)",
-                    color: "#1a1410",
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  Our Studio
-                </h2>
-
-                {/* Divider */}
-                <div
-                  className="mb-6 ml-auto"
-                  style={{
-                    width: "2rem",
-                    height: "1px",
-                    background: "rgba(0,0,0,0.12)",
-                  }}
-                />
 
                 <div className="space-y-3">
                   <p
@@ -176,26 +154,30 @@ export default function Footer() {
                     <br />
                     Gurgaon, Haryana 122002, India
                   </p>
-                  <p
-                    className="text-sm"
+                  <a
+                    href="tel:+919560025169"
+                    className="block text-sm transition-opacity duration-200 hover:opacity-60"
                     style={{
-                      color: "#a89880",
+                      color: "#5c4f42",
                       fontFamily: "'Jost', sans-serif",
                       fontWeight: 300,
+                      textDecoration: "none",
                     }}
                   >
-                    +91 9810163804
-                  </p>
-                  <p
-                    className="text-sm"
+                    +91 9560025169
+                  </a>
+                  <a
+                    href="mailto:sangeeta.xclusivecreations@gmail.com"
+                    className="block text-sm transition-opacity duration-200 hover:opacity-60"
                     style={{
-                      color: "#a89880",
+                      color: "#5c4f42",
                       fontFamily: "'Jost', sans-serif",
                       fontWeight: 300,
+                      textDecoration: "none",
                     }}
                   >
-                    info@melange.com
-                  </p>
+                    sangeeta.xclusivecreations@gmail.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -209,7 +191,7 @@ export default function Footer() {
                 <p
                   className="text-xs"
                   style={{
-                    color: "#a89880",
+                    color: "#5c4f42",
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
                   }}
@@ -219,7 +201,7 @@ export default function Footer() {
                 <p
                   className="text-xs"
                   style={{
-                    color: "#a89880",
+                    color: "#5c4f42",
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
                   }}

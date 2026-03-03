@@ -184,22 +184,22 @@ const CATEGORIES: CategoryData[] = [
       "Our bedrooms are sanctuaries — layered textures, bespoke headboards, ambient lighting systems, and thoughtful storage that disappear into the design, leaving only serenity.",
     images: categoryWiseImages["bedroom"],
   },
-  {
-    id: "tvCabinet",
-    label: "TV Cabinet",
-    tagline: "Screens that disappear into design.",
-    description:
-      "We treat the TV wall as a focal canvas — integrating screens seamlessly with fluted panels, back-lit joinery, and custom millwork so technology feels like art, not an afterthought.",
-    images: categoryWiseImages["tvCabinet"],
-  },
-  {
-    id: "closets",
-    label: "Closets",
-    tagline: "Order as a luxury.",
-    description:
-      "Walk-in wardrobes designed as dressing rooms — full-height mirrors, velvet-lined drawers, accent lighting on display shelves, and a layout that makes the ritual of dressing feel indulgent.",
-    images: categoryWiseImages["closets"],
-  },
+  // {
+  //   id: "tvCabinet",
+  //   label: "TV Cabinet",
+  //   tagline: "Screens that disappear into design.",
+  //   description:
+  //     "We treat the TV wall as a focal canvas — integrating screens seamlessly with fluted panels, back-lit joinery, and custom millwork so technology feels like art, not an afterthought.",
+  //   images: categoryWiseImages["tvCabinet"],
+  // },
+  // {
+  //   id: "closets",
+  //   label: "Closets",
+  //   tagline: "Order as a luxury.",
+  //   description:
+  //     "Walk-in wardrobes designed as dressing rooms — full-height mirrors, velvet-lined drawers, accent lighting on display shelves, and a layout that makes the ritual of dressing feel indulgent.",
+  //   images: categoryWiseImages["closets"],
+  // },
   {
     id: "bathroom",
     label: "Bathroom",

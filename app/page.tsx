@@ -275,7 +275,7 @@ const testimonialVideos = [
   },
   {
     url: "/PraveenNangiaTestimonialClip.mp4",
-    clientName: "Praveen Nangia",
+    clientName: "Jyoti Nangia",
     projectDetails:
       "4 BHK apartment in Gurugram with contemporary design, Gurugram.",
     thumbnail: "/PraveenNangiaTestimonialThumbnail.png",
