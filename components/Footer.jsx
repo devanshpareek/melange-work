@@ -78,7 +78,7 @@ export default function Footer() {
                   }}
                 >
                   Creating beautiful and elegant living spaces for over 25+
-                  years across India and the UK.
+                  years.
                 </p>
 
                 {/* Social Icons */}

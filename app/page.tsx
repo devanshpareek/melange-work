@@ -40,39 +40,23 @@ const products1 = [
 
 const centerImage1 = "./OurWork1_5.jpg";
 
-const centerImage2 = "./OurWork2_5.jpg";
-
 const products2 = [
-  {
-    image: "/OurWork2_1.jpg",
-  },
-  {
-    image: "OurWork2_2.jpg",
-  },
-  {
-    image: "OurWork2_3.jpg",
-  },
-  {
-    image: "OurWork2_4.jpg",
-  },
+  { image: "/AshishGupta2_1.jpg" },
+  { image: "/AshishGupta2_2.jpg" },
+  { image: "/AshishGupta2_3.jpg" },
+  { image: "/AshishGupta2_4.jpg" },
 ];
 
-const centerImage3 = "./OurWork3_5.jpg";
+const centerImage2 = "/AshishGupta2_5.jpg";
 
 const products3 = [
-  {
-    image: "/OurWork3_1.jpg",
-  },
-  {
-    image: "OurWork3_2.jpg",
-  },
-  {
-    image: "OurWork3_3.jpg",
-  },
-  {
-    image: "OurWork3_4.jpg",
-  },
+  { image: "/SashiAggarwal1_1.jpg" },
+  { image: "/SashiAggarwal1_2.jpg" },
+  { image: "/SashiAggarwal1_3.jpg" },
+  { image: "/SashiAggarwal1_4.jpg" },
 ];
+
+const centerImage3 = "/SashiAggarwal1_5.jpg";
 
 // Additional projects for "show more"
 
@@ -245,23 +229,30 @@ const steps = [
   {
     title: "YOU VISIT OUR STUDIO",
     description:
-      "You meet us at our studio and see our work. We understand your needs and help you identify and make all the big decisions.",
+      "When you visit our studio, we take the time to understand your lifestyle, preferences, and the story you want your home to tell. We discuss your ideas, inspirations, functional needs, and budget while studying the architectural possibilities of your space.",
     icon: <img className="w-16 h-16" src={"/studio.png"} />,
     image: "/Studio.jpg",
   },
   {
     title: "WE ENVISION",
     description:
-      "We begin our design process and envision your new home, all the way from kitchens to throw pillows. We give you 3D visuals and layouts to help you see our vision for your new home.",
+      "Once we understand your vision, we begin shaping the concept. Through layouts, mood boards, material palettes, and design sketches, we develop a cohesive direction for your home. Every element—from furniture and lighting to textures and colours—is thoughtfully curated.",
     icon: <img className="w-16 h-16" src={"/man.png"} />,
     image: "/Envision.jpg",
   },
   {
     title: "WE CREATE",
     description:
-      "We shift from design to project management mode and begin procuring and building the furniture for your new home. We ensure that everything is sourced and created with the same standards we apply for our own home. Finally, we deliver, install, and ensure you're all set to innagurate your new home.",
+      "Our team works closely with craftsmen, vendors, and contractors to bring the design to life from bespoke furniture and custom details to finishes and installations. We oversee the process closely to ensure every element aligns with the vision and maintains the quality Melange stands for.",
     icon: <img className="w-16 h-16" src={"/value.png"} />,
     image: "/OurWork2_2.jpg",
+  },
+  {
+    title: "THE END RESULT",
+    description:
+      "The final step is the most rewarding when the space comes together as a home. Furniture is placed, details are styled, and every element is refined. The result is a home that reflects your personality while carrying the timeless design language of Melange.",
+    icon: <img className="w-16 h-16" src={"/value.png"} />,
+    image: "/END_RESULT_IMAGE.jpg",
   },
 ];
 
@@ -320,10 +311,11 @@ export default function Home() {
       <div id="our-work">
         <FeaturedCategories />
         <OurWork
-          products={products1}
-          centerImage={centerImage1}
+          products={products5}
+          centerImage={centerImage5}
           showTitle={true}
         />
+
         <OurWork
           products={products2}
           centerImage={centerImage2}
@@ -343,10 +335,11 @@ export default function Home() {
               showTitle={false}
             />
             <OurWork
-              products={products5}
-              centerImage={centerImage5}
+              products={products1}
+              centerImage={centerImage1}
               showTitle={false}
             />
+
             <OurWork
               products={products6}
               centerImage={centerImage6}

@@ -204,7 +204,7 @@ export default function ContactUs() {
                       fontWeight: 300,
                     }}
                   >
-                    +91 9810163804 | +91 9971015678
+                    +91 9810163804 | +91 9560025169
                   </p>
                 </div>
               </div>
