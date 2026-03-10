@@ -116,7 +116,8 @@ export default function AboutUs({ showTitle = true }) {
                 {/* Social links */}
                 <div className="flex items-center gap-3 mt-4">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/sangeeta.kapoor.948"
+                    target="blank"
                     aria-label="Facebook"
                     className="flex items-center justify-center transition-all duration-300"
                     style={{
@@ -145,8 +146,9 @@ export default function AboutUs({ showTitle = true }) {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/melange.by.sangeetakapoor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     aria-label="Instagram"
+                    target="blank"
                     className="flex items-center justify-center transition-all duration-300"
                     style={{
                       width: "2.2rem",
