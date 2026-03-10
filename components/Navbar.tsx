@@ -111,11 +111,12 @@ export default function Navbar() {
             <button
               onClick={() => scrollToSection("contact-us")}
               type="button"
-              className="text-xs tracking-[0.3em] uppercase border px-5 py-2.5 transition-all duration-250"
+              className="text-xs font-bold tracking-[0.3em] uppercase border px-5 py-2.5 transition-all duration-250"
               style={{
                 fontFamily: "'Jost', sans-serif",
                 color: "#7c5c3e",
                 borderColor: "rgba(124,92,62,0.45)",
+                borderWidth: "1.5px",
               }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLButtonElement).style.background =
@@ -315,11 +316,12 @@ export default function Navbar() {
                 <button
                   onClick={() => scrollToSection("contact-us")}
                   type="button"
-                  className="w-full text-xs tracking-[0.3em] uppercase border px-5 py-3 transition-all duration-250"
+                  className="w-full text-xs font-bold tracking-[0.3em] uppercase border px-5 py-3 transition-all duration-250"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     color: "#7c5c3e",
                     borderColor: "rgba(124,92,62,0.45)",
+                    borderWidth: "1.5px",
                   }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLButtonElement).style.background =

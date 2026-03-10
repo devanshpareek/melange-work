@@ -28,13 +28,13 @@ const FEATURED: FeaturedCategory[] = [
     href: "/category?category=living-room",
   },
   {
-    id: "dining-room",
+    id: "dining-area",
     label: "Dining Room",
     tagline: "Gather around beauty.",
     description:
       "More than just a place to eat — a dining room should feel like an event. We layer tactile materials, sculptural lighting, and custom tables to create a setting that elevates every meal into a moment worth savoring.",
     image: "/Melange_Faridabad2_1.jpg",
-    href: "/category?category=dining-room",
+    href: "/category?category=dining-area",
   },
   {
     id: "bedroom",

@@ -197,14 +197,38 @@ export default function ContactUs() {
                     Phone
                   </p>
                   <p
-                    className="text-sm"
+                    className="text-sm flex gap-2"
                     style={{
                       color: "#a89880",
                       fontFamily: "'Jost', sans-serif",
                       fontWeight: 300,
                     }}
                   >
-                    +91 9810163804 | +91 9560025169
+                    <a
+                      href="tel:+919560025169"
+                      className="block text-sm transition-opacity duration-200 hover:opacity-60"
+                      style={{
+                        color: "#a89880",
+                        fontFamily: "'Jost', sans-serif",
+                        fontWeight: 300,
+                        textDecoration: "none",
+                      }}
+                    >
+                      +91 9810163804
+                    </a>
+                    <p>|</p>
+                    <a
+                      href="tel:+919560025169"
+                      className="block text-sm transition-opacity duration-200 hover:opacity-60"
+                      style={{
+                        color: "#a89880",
+                        fontFamily: "'Jost', sans-serif",
+                        fontWeight: 300,
+                        textDecoration: "none",
+                      }}
+                    >
+                      +91 9560025169
+                    </a>
                   </p>
                 </div>
               </div>
