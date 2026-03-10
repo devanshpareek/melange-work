@@ -205,7 +205,7 @@ export default function ContactUs() {
                     }}
                   >
                     <a
-                      href="tel:+919560025169"
+                      href="tel:+919810163804"
                       className="block text-sm transition-opacity duration-200 hover:opacity-60"
                       style={{
                         color: "#a89880",
