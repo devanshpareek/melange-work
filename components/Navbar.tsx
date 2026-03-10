@@ -132,7 +132,7 @@ export default function Navbar() {
                   "rgba(124,92,62,0.45)";
               }}
             >
-              Get Started
+              Let's Connect
             </button>
           </div>
 
@@ -338,7 +338,7 @@ export default function Navbar() {
                       "rgba(124,92,62,0.45)";
                   }}
                 >
-                  Get Started
+                  Let's Connect
                 </button>
               </li>
             </ul>
