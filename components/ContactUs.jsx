@@ -216,7 +216,7 @@ export default function ContactUs() {
                     >
                       +91 9810163804
                     </a>
-                    <p>|</p>
+                    <span>|</span>
                     <a
                       href="tel:+919560025169"
                       className="block text-sm transition-opacity duration-200 hover:opacity-60"

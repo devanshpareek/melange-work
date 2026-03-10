@@ -261,6 +261,7 @@ export function OurProcess({ services, title, description }) {
   // On mobile (touch), tapping opens the modal.
   // On desktop, hover shows the in-card overlay; clicking also opens modal for accessibility.
   const handleCardClick = (service, index) => {
+    setHoveredIndex(null); // clear hover (important on mobile where touch fires mouseenter)
     setModalService(service);
     setModalIndex(index);
   };
@@ -308,8 +309,12 @@ export function OurProcess({ services, title, description }) {
                         "border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease",
                     }}
                     onClick={() => handleCardClick(service, index)}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
+                    onPointerEnter={(e) => {
+                      if (e.pointerType === "mouse") setHoveredIndex(index);
+                    }}
+                    onPointerLeave={(e) => {
+                      if (e.pointerType === "mouse") setHoveredIndex(null);
+                    }}
                   >
                     <Image
                       src={service.image}
