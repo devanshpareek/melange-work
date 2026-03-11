@@ -116,7 +116,7 @@ export default function AboutUs({ showTitle = true }) {
                 {/* Social links */}
                 <div className="flex items-center gap-3 mt-4">
                   <a
-                    href="https://www.facebook.com/sangeeta.kapoor.948"
+                    href="https://www.facebook.com/Melange-By-Sangeeta-Kapoor-193973380623291/?pnref=lhc"
                     target="blank"
                     aria-label="Facebook"
                     className="flex items-center justify-center transition-all duration-300"
