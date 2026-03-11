@@ -208,14 +208,14 @@ const CATEGORIES: CategoryData[] = [
       "Spa-inspired bathrooms with book-matched marble, freestanding soaking tubs, rain showers with mood lighting, and fixtures chosen not just for function but for how they feel in your hand.",
     images: categoryWiseImages["bathroom"],
   },
-  // {
-  //   id: "outdoor-space",
-  //   label: "Outdoor Space",
-  //   tagline: "Bring the inside out.",
-  //   description:
-  //     "Terraces, courtyards, and landscaped gardens designed for all-weather living — outdoor kitchens, pergolas draped in greenery, and furniture that blurs the line between indoors and out.",
-  //   images: categoryWiseImages["outdoor-space"],
-  // },
+  {
+    id: "outdoor-space",
+    label: "Quiet Corners",
+    tagline: "Corners to escape, moments to pause.",
+    description:
+      "The beauty of a home often lies in its quieter spaces. From serene pooja rooms to carefully styled corridors and balcony nooks, these corners bring warmth, character, and balance to everyday living.",
+    images: categoryWiseImages["outdoor-space"],
+  },
 ];
 
 // ─── Lightbox ─────────────────────────────────────────────────────────────────

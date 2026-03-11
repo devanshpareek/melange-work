@@ -134,6 +134,13 @@ export const categoryWiseImages = {
     "/bathroom14.jpg",
   ],
   "outdoor-space": [
+    "/mandir_1.jpg",
+    "/mandir_2.jpg",
+    "/mandir_3.jpg",
+    "/mandir_4.jpg",
+    "/mandir_5.jpg",
+    "/mandir_6.jpg",
+    "/mandir_7.jpg",
     "/Sec_15_Noida_2_1.jpg",
     "/Sec_15_Noida_2_2.jpg",
     "/Sec_15_Noida_2_3.jpg",
