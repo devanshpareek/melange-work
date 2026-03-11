@@ -1,12 +1,74 @@
+import type { Metadata } from "next";
 import React from "react";
 import {
   ClientTestimonial,
-  project1,
   ProjectDescription,
-} from "../../dlf-phase-4/page";
+} from "../../ProjectDetailsHelper";
 import OurWork from "@/components/OurWork";
 import InstagramReels from "@/app/components/InstagramReels";
-import Image from "next/image";
+
+// ─── SEO ──────────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: "Shivani & Bhuvam's Modern Penthouse — 4,500 sq ft, Gurugram",
+  description:
+    "Melange designed a 4,500 sq ft independent house across three floors in Gurugram for Shivani & Bhuvam. Custom ceiling designs, premium flooring, bespoke furniture, and stunning wall finishes — delivered in 12 months.",
+  keywords: [
+    "independent house interior design Gurugram",
+    "3 floor house interior Gurgaon",
+    "luxury home design Gurugram",
+    "bespoke interiors Gurgaon",
+    "custom home design Gurugram",
+    "interior designer Gurgaon",
+    "Melange interior design Gurugram project",
+  ],
+  alternates: {
+    canonical: "https://melange-work.vercel.app/shivani-and-bhuvam",
+  },
+  openGraph: {
+    url: "https://melange-work.vercel.app/shivani-and-bhuvam",
+    title:
+      "Shivani & Bhuvam's Modern Penthouse — 4,500 sq ft, Gurugram | Melange",
+    description:
+      "4,500 sq ft independent house across three floors in Gurugram. Custom ceilings, premium flooring, and bespoke furniture in 12 months.",
+    images: [
+      {
+        url: "/bhuvam11.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Shivani and Bhuvam Penthouse Gurugram by Melange",
+      },
+    ],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Shivani & Bhuvam's Modern Penthouse — Gurugram",
+  description:
+    "Complete design of a 4,500 sq ft independent house across three floors in Gurugram. Custom ceiling designs, premium flooring throughout all levels, stunning wall finishes, and bespoke furniture tailored to each space.",
+  url: "https://melange-work.vercel.app/shivani-and-bhuvam",
+  image: "https://melange-work.vercel.app/bhuvam11.jpg",
+  creator: {
+    "@type": "LocalBusiness",
+    name: "Melange by Sangeeta Kapoor",
+    url: "https://melange-work.vercel.app",
+  },
+  locationCreated: {
+    "@type": "Place",
+    name: "Gurugram, Haryana, India",
+  },
+  review: {
+    "@type": "Review",
+    reviewBody:
+      "From the initial consultation to the final reveal, their creativity, attention to detail, and understanding of my vision were outstanding. Every room now feels modern, functional, and perfectly tailored to my lifestyle.",
+    author: { "@type": "Person", name: "Shivani & Bhuvam" },
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+  },
+};
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const images1 = [
   { image: "/bhuvam11.jpg" },
@@ -14,7 +76,6 @@ const images1 = [
   { image: "/bhuvam13.jpg" },
   { image: "/bhuvam14.jpg" },
 ];
-
 const centerImage1 = "/bhuvam15.jpg";
 
 const images2 = [
@@ -23,7 +84,6 @@ const images2 = [
   { image: "/bhuvam23.jpg" },
   { image: "/bhuvam24.jpg" },
 ];
-
 const centerImage2 = "/bhuvam25.jpg";
 
 const images3 = [
@@ -32,7 +92,6 @@ const images3 = [
   { image: "/bhuvam33.jpg" },
   { image: "/bhuvam34.jpg" },
 ];
-
 const centerImage3 = "/bhuvam35.jpg";
 
 const images4 = [
@@ -41,7 +100,6 @@ const images4 = [
   { image: "/bhuvam43.jpg" },
   { image: "/bhuvam44.jpg" },
 ];
-
 const centerImage4 = "/bhuvam45.jpg";
 
 const images5 = [
@@ -50,10 +108,7 @@ const images5 = [
   { image: "/bhuvam53.jpg" },
   { image: "/bhuvam54.jpg" },
 ];
-
 const centerImage5 = "/bhuvam55.jpg";
-
-const outdoorImages = [{ image: "/bhuvam6.jpg" }, { image: "/bhuvam7.jpg" }];
 
 export const projectDetails = {
   title: "Shivani & Bhuvam's Modern Penthouse",
@@ -77,26 +132,6 @@ export const projectDetails = {
     "Bespoke furniture tailored to each space",
     "Seamless flow and integration between floors",
   ],
-  centerImage:
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800",
-  images: [
-    {
-      image:
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1600573472591-ee6c68886b3a?w=600",
-    },
-  ],
   testimonial: {
     quote:
       "I recently had my home designed by 'Melange by Sangeeta Kapoor', and the results have completely transformed the space. From the initial consultation to the final reveal, their creativity, attention to detail, and understanding of my vision were outstanding. Every room now feels modern, functional, and perfectly tailored to my lifestyle—I'm receiving compliments from everyone who visits! I couldn't be happier and highly recommend them for anyone looking to elevate their home.",
@@ -105,9 +140,15 @@ export const projectDetails = {
   },
 };
 
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
 const page = () => {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ProjectDescription project={projectDetails} />
       <OurWork
         showTitle={false}
@@ -119,7 +160,6 @@ const page = () => {
         centerImage={centerImage5}
         products={images5}
       />
-
       <OurWork
         showTitle={false}
         centerImage={centerImage3}
@@ -135,27 +175,6 @@ const page = () => {
         centerImage={centerImage2}
         products={images2}
       />
-      {/* <div className="space-y-6 md:space-y-8 w-full">
-        <div className="relative w-full h-[50vh] md:h-[80vh] overflow-hidden rounded-lg">
-          <Image
-            src={outdoorImages[0].image}
-            alt="Outdoor Image 1"
-            fill
-            className="object-contain hover:scale-105 transition-transform duration-300"
-            sizes="100vw"
-          />
-        </div>
-
-        <div className="relative w-full h-[50vh] md:h-[80vh] overflow-hidden rounded-lg">
-          <Image
-            src={outdoorImages[1].image}
-            alt="Outdoor Image 2"
-            fill
-            className="object-contain hover:scale-105 transition-transform duration-300"
-            sizes="100vw"
-          />
-        </div>
-      </div> */}
       <ClientTestimonial testimonial={projectDetails.testimonial} />
     </div>
   );

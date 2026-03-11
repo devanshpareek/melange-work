@@ -1,8 +1,67 @@
+import type { Metadata } from "next";
 import React from "react";
-import { ClientTestimonial, ProjectDescription } from "../../dlf-phase-4/page";
+import {
+  ClientTestimonial,
+  ProjectDescription,
+} from "../../ProjectDetailsHelper";
 import OurWork from "@/components/OurWork";
-import TestimonialVideo from "../../components/TestimonialVideo";
-import InstagramReels from "../../components/InstagramReels";
+import InstagramReels from "@/app/components/InstagramReels";
+
+// ─── SEO ──────────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: "Prestigious 4BHK Apartment Interior — Pearl Gateway, Noida",
+  description:
+    "Melange transformed a 3,000 sq ft 4BHK apartment at Pearl Gateway, Noida in just 6 months. Elegant ceiling designs, bespoke wall finishes, custom furniture, and a seamless luxury finish — delivered with speed and sophistication.",
+  keywords: [
+    "4BHK interior design Noida",
+    "apartment interior designer Noida",
+    "luxury apartment renovation Noida",
+    "Pearl Gateway Noida interior",
+    "custom furniture apartment Noida",
+    "interior designer Delhi NCR",
+    "Melange interior design Noida",
+  ],
+  alternates: {
+    canonical: "https://melange-work.vercel.app/luxury-4bhk-noida",
+  },
+  openGraph: {
+    url: "https://melange-work.vercel.app/luxury-4bhk-noida",
+    title:
+      "Prestigious 4BHK Apartment Interior — Pearl Gateway, Noida | Melange",
+    description:
+      "3,000 sq ft luxury 4BHK apartment interior at Pearl Gateway, Noida. End-to-end design delivered in 6 months with bespoke ceiling designs and custom furniture.",
+    images: [
+      {
+        url: "/adarsh_aggarwal1_1.jpg",
+        width: 1200,
+        height: 800,
+        alt: "4BHK Apartment Interior Noida by Melange",
+      },
+    ],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Prestigious 4BHK Apartment Interior — Pearl Gateway, Noida",
+  description:
+    "End-to-end interior design for a 3,000 sq ft 4BHK apartment at Pearl Gateway, Noida. Elegant ceilings, custom furniture, and premium finishes delivered in 6 months.",
+  url: "https://melange-work.vercel.app/luxury-4bhk-noida",
+  image: "https://melange-work.vercel.app/adarsh_aggarwal1_1.jpg",
+  creator: {
+    "@type": "LocalBusiness",
+    name: "Melange by Sangeeta Kapoor",
+    url: "https://melange-work.vercel.app",
+  },
+  locationCreated: {
+    "@type": "Place",
+    name: "Pearl Gateway, Noida, Uttar Pradesh, India",
+  },
+};
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const images1 = [
   { image: "/adarsh_aggarwal1_1.jpg" },
@@ -10,7 +69,6 @@ const images1 = [
   { image: "/adarsh_aggarwal1_3.jpg" },
   { image: "/adarsh_aggarwal1_4.jpg" },
 ];
-
 const centerImage1 = "/adarsh_aggarwal1_5.jpg";
 
 const images2 = [
@@ -19,7 +77,6 @@ const images2 = [
   { image: "/adarsh_aggarwal2_3.jpg" },
   { image: "/adarsh_aggarwal2_4.jpg" },
 ];
-
 const centerImage2 = "/adarsh_aggarwal2_5.jpg";
 
 const images3 = [
@@ -28,7 +85,6 @@ const images3 = [
   { image: "/adarsh_aggarwal3_3.jpg" },
   { image: "/adarsh_aggarwal3_4.jpg" },
 ];
-
 const centerImage3 = "/adarsh_aggarwal3_5.jpg";
 
 const images4 = [
@@ -37,14 +93,7 @@ const images4 = [
   { image: "/adarsh_aggarwal4_3.jpg" },
   { image: "/adarsh_aggarwal4_4.jpg" },
 ];
-
 const centerImage4 = "/adarsh_aggarwal4_5.jpg";
-
-// Project type: - Independent house (3 floors + terrace) end to end project
-// Estimated area: - 6000 sqft each floor
-// Location: - Faridabad
-// Competition time: - 2 years
-// Content:
 
 const projectDetails = {
   title: "Prestigious 4BHK Apartment Interior",
@@ -78,22 +127,21 @@ const projectDetails = {
 };
 
 const reelsData = [
-  {
-    embedUrl: "https://www.instagram.com/reel/DJrk78DywCK/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DJzRY1NI7uW/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DOBXPkIklWj/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DJhCq5-oDJe/embed",
-  },
+  { embedUrl: "https://www.instagram.com/reel/DJrk78DywCK/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DJzRY1NI7uW/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DOBXPkIklWj/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DJhCq5-oDJe/embed" },
 ];
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
 const page = () => {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ProjectDescription project={projectDetails} />
       <OurWork
         showTitle={false}
@@ -115,9 +163,6 @@ const page = () => {
         centerImage={centerImage4}
         products={images4}
       />
-
-      {/* <ClientTestimonial testimonial={projectDetails.testimonial} />
-      <TestimonialVideo video={projectDetails.testimonial.clip} /> */}
       <InstagramReels reels={reelsData} />
     </div>
   );

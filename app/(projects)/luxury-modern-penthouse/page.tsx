@@ -1,11 +1,73 @@
+import type { Metadata } from "next";
 import React from "react";
 import {
   ClientTestimonial,
-  project1,
   ProjectDescription,
-} from "../../dlf-phase-4/page";
+} from "../../ProjectDetailsHelper";
 import OurWork from "@/components/OurWork";
 import InstagramReels from "@/app/components/InstagramReels";
+
+// ─── SEO ──────────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: "Luxury Modern Penthouse Makeover — 3,000 sq ft, Noida",
+  description:
+    "Melange redesigned a 3,000 sq ft contemporary penthouse in Noida for the Gupta family. Modern living areas, a dedicated mandir space, study zone, and custom bedrooms — all completed in 11 months.",
+  keywords: [
+    "penthouse interior design Noida",
+    "luxury penthouse makeover India",
+    "contemporary penthouse interiors Noida",
+    "modern home renovation Noida",
+    "custom interior design Noida",
+    "interior designer Noida",
+    "Melange interior design penthouse",
+  ],
+  alternates: {
+    canonical: "https://melange-work.vercel.app/luxury-modern-penthouse",
+  },
+  openGraph: {
+    url: "https://melange-work.vercel.app/luxury-modern-penthouse",
+    title: "Luxury Modern Penthouse Makeover — 3,000 sq ft, Noida | Melange",
+    description:
+      "Contemporary penthouse makeover across 3,000 sq ft in Noida. Modern living areas, custom bedrooms, mandir space, and premium finishes in 11 months.",
+    images: [
+      {
+        url: "/Sec_15_Noida_1_1.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Luxury Modern Penthouse Noida by Melange",
+      },
+    ],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Luxury Modern Penthouse Makeover — Noida",
+  description:
+    "Complete transformation of a 3,000 sq ft penthouse in Noida. Bright modern living area, dedicated mandir space, study zone, custom bedroom furniture, new flooring, and curated décor — completed in 11 months.",
+  url: "https://melange-work.vercel.app/luxury-modern-penthouse",
+  image: "https://melange-work.vercel.app/Sec_15_Noida_1_1.jpg",
+  creator: {
+    "@type": "LocalBusiness",
+    name: "Melange by Sangeeta Kapoor",
+    url: "https://melange-work.vercel.app",
+  },
+  locationCreated: {
+    "@type": "Place",
+    name: "Noida, Uttar Pradesh, India",
+  },
+  review: {
+    "@type": "Review",
+    reviewBody:
+      "Working with MELANGE was an absolute pleasure. They transformed our house into a home that perfectly reflects our style and meets all our functional needs. The attention to detail and quality of craftsmanship exceeded our expectations.",
+    author: { "@type": "Person", name: "Richa and Mahesh Gupta" },
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+  },
+};
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const images1 = [
   { image: "/Sec_15_Noida_1_1.jpg" },
@@ -13,7 +75,6 @@ const images1 = [
   { image: "/Sec_15_Noida_1_3.jpg" },
   { image: "/Sec_15_Noida_1_4.jpg" },
 ];
-
 const centerImage1 = "/Sec_15_Noida_1_5.jpg";
 
 const images2 = [
@@ -22,7 +83,6 @@ const images2 = [
   { image: "/Sec_15_Noida_2_3.jpg" },
   { image: "/Sec_15_Noida_2_4.jpg" },
 ];
-
 const centerImage2 = "/Sec_15_Noida_2_5.jpg";
 
 const images3 = [
@@ -31,7 +91,6 @@ const images3 = [
   { image: "/Sec_15_Noida_3_3.jpg" },
   { image: "/Sec_15_Noida_3_4.jpg" },
 ];
-
 const centerImage3 = "/Sec_15_Noida_3_5.jpg";
 
 const images4 = [
@@ -40,29 +99,7 @@ const images4 = [
   { image: "/Sec_15_Noida_4_3.jpg" },
   { image: "/Sec_15_Noida_4_4.jpg" },
 ];
-
 const centerImage4 = "/Sec_15_Noida_4_5.jpg";
-
-const reelsData = [
-  {
-    embedUrl: "https://www.instagram.com/reel/DEH7ugHIq2m/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DH1PzCBoGZv/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DFKu484yHFW/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DE7mbE9y81K/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DEsOu3Uyn9r/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DEfGE00IPpa/embed",
-  },
-];
 
 export const projectDetails = {
   title: "Luxury Modern Penthouse Makeover",
@@ -85,26 +122,6 @@ export const projectDetails = {
     "Custom-designed bedroom furniture",
     "Curated décor with premium flooring",
   ],
-  centerImage:
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800",
-  images: [
-    {
-      image:
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1600573472591-ee6c68886b3a?w=600",
-    },
-  ],
   testimonial: {
     quote:
       "Working with MELANGE was an absolute pleasure. They transformed our house into a home that perfectly reflects our style and meets all our functional needs. The attention to detail and quality of craftsmanship exceeded our expectations.",
@@ -113,9 +130,24 @@ export const projectDetails = {
   },
 };
 
+const reelsData = [
+  { embedUrl: "https://www.instagram.com/reel/DEH7ugHIq2m/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DH1PzCBoGZv/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DFKu484yHFW/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DE7mbE9y81K/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DEsOu3Uyn9r/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DEfGE00IPpa/embed" },
+];
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
 const page = () => {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ProjectDescription project={projectDetails} />
       <OurWork
         showTitle={false}

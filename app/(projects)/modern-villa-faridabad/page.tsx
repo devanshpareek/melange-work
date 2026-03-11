@@ -1,8 +1,74 @@
+import type { Metadata } from "next";
 import React from "react";
-import { ClientTestimonial, ProjectDescription } from "../../dlf-phase-4/page";
+import {
+  ClientTestimonial,
+  ProjectDescription,
+} from "../../ProjectDetailsHelper";
 import OurWork from "@/components/OurWork";
 import TestimonialVideo from "@/app/components/TestimonialVideo";
 import InstagramReels from "@/app/components/InstagramReels";
+
+// ─── SEO ──────────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: "Modern Villa Interior Design — 6,000 sq ft, Faridabad",
+  description:
+    "Melange designed a stunning 6,000 sq ft modern villa across three floors in Faridabad. Soaring ceilings, premium Italian marble, custom furniture, designer lighting — a complete interior transformation delivered over 2 years.",
+  keywords: [
+    "modern villa interior Faridabad",
+    "independent house interior design Faridabad",
+    "luxury villa interior designer",
+    "3 floor house interior design India",
+    "custom furniture home design Faridabad",
+    "interior designer Faridabad",
+    "Melange interior design Faridabad",
+  ],
+  alternates: {
+    canonical: "https://melange-work.vercel.app/modern-villa-faridabad",
+  },
+  openGraph: {
+    url: "https://melange-work.vercel.app/modern-villa-faridabad",
+    title: "Modern Villa Interior Design — 6,000 sq ft, Faridabad | Melange",
+    description:
+      "Complete interior design for a 6,000 sq ft modern villa across three floors in Faridabad. Bespoke furniture, premium finishes, and designer lighting.",
+    images: [
+      {
+        url: "/AshishGupta1_1.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Modern Villa Interior Faridabad by Melange",
+      },
+    ],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Modern Villa Interior — Faridabad",
+  description:
+    "End-to-end interior design for a 6,000 sq ft independent house across three floors in Faridabad. Features double-height spaces, premium Italian marble, custom furniture, and layered designer lighting.",
+  url: "https://melange-work.vercel.app/modern-villa-faridabad",
+  image: "https://melange-work.vercel.app/AshishGupta1_1.jpg",
+  creator: {
+    "@type": "LocalBusiness",
+    name: "Melange by Sangeeta Kapoor",
+    url: "https://melange-work.vercel.app",
+  },
+  locationCreated: {
+    "@type": "Place",
+    name: "Faridabad, Haryana, India",
+  },
+  review: {
+    "@type": "Review",
+    reviewBody:
+      "We are in love with the space. Sangeeta ma'am truly understood each one of us and the interiors were done wonderfully. Every furniture, every fabric, really reflects us.",
+    author: { "@type": "Person", name: "Shreya Gupta" },
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+  },
+};
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const images1 = [
   { image: "/AshishGupta1_1.jpg" },
@@ -10,7 +76,6 @@ const images1 = [
   { image: "/AshishGupta1_3.jpg" },
   { image: "/AshishGupta1_4.jpg" },
 ];
-
 const centerImage1 = "/AshishGupta1_5.jpg";
 
 const images2 = [
@@ -19,14 +84,7 @@ const images2 = [
   { image: "/AshishGupta2_3.jpg" },
   { image: "/AshishGupta2_4.jpg" },
 ];
-
 const centerImage2 = "/AshishGupta2_5.jpg";
-
-// Project type: - Independent house (3 floors + terrace) end to end project
-// Estimated area: - 6000 sqft each floor
-// Location: - Faridabad
-// Competition time: - 2 years
-// Content:
 
 const projectDetails = {
   title: "Modern Villa Interior",
@@ -56,26 +114,26 @@ const projectDetails = {
       "We are in love with the space. Hi, my name is Shreya Gupta and working with Milans was a wonderful experience. Sangeeta ma'am truly understood each one of us and the interiors were done wonderfully. If you see us, you will understand what we mean because every furniture, every fabric, like really reflects us and the team also really understood us well.",
     author: "Gupta Residence",
     role: "Homeowners",
-    // image: images1[0].image,
     clip: "/AshishGuptaTestemonial.mp4",
     thumbnail: "/AshishGuptaTestemonialThumbnail.png",
   },
 };
 
 const reelsData = [
-  {
-    embedUrl: "https://www.instagram.com/reel/DRWhEawEpeF/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DSmBu8-kmF2/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DSXn4rkEh9x/embed",
-  },
+  { embedUrl: "https://www.instagram.com/reel/DRWhEawEpeF/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DSmBu8-kmF2/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DSXn4rkEh9x/embed" },
 ];
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
 const page = () => {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ProjectDescription project={projectDetails} />
       <OurWork
         showTitle={false}
@@ -87,7 +145,6 @@ const page = () => {
         centerImage={centerImage2}
         products={images2}
       />
-
       <ClientTestimonial testimonial={projectDetails.testimonial} />
       <TestimonialVideo
         thumbnail={projectDetails.testimonial.thumbnail}

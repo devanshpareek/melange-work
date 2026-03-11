@@ -1,8 +1,74 @@
+import type { Metadata } from "next";
 import React from "react";
-import { ClientTestimonial, ProjectDescription } from "../../dlf-phase-4/page";
+import {
+  ClientTestimonial,
+  ProjectDescription,
+} from "../../ProjectDetailsHelper";
 import OurWork from "@/components/OurWork";
 import TestimonialVideo from "@/app/components/TestimonialVideo";
 import InstagramReels from "@/app/components/InstagramReels";
+
+// ─── SEO ──────────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: "27,000 sq ft Luxury Residence Interior — Faridabad",
+  description:
+    "An end-to-end 27,000 sq ft luxury residence designed by Melange for the Aggarwal family in Faridabad. Three floors of bespoke interiors featuring multiple living areas, private theatre rooms, custom furniture, and handcrafted detailing — completed over 2 years.",
+  keywords: [
+    "luxury residence interior Faridabad",
+    "end to end home design Faridabad",
+    "large home interior designer India",
+    "custom furniture interior design",
+    "bespoke home interiors Faridabad",
+    "interior designer Faridabad",
+    "Melange interior design project",
+  ],
+  alternates: {
+    canonical: "https://melange-work.vercel.app/luxury-residence-interior",
+  },
+  openGraph: {
+    url: "https://melange-work.vercel.app/luxury-residence-interior",
+    title: "27,000 sq ft Luxury Residence Interior — Faridabad | Melange",
+    description:
+      "End-to-end design of a 27,000 sq ft luxury residence in Faridabad. Multiple living areas, theatre rooms, and handcrafted furniture across three floors.",
+    images: [
+      {
+        url: "/Melange_Faridabad1_3.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Luxury Residence Interior Faridabad by Melange",
+      },
+    ],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Luxury Residence Interior — Faridabad",
+  description:
+    "A sprawling 27,000 sq ft luxury residence designed end-to-end by Melange by Sangeeta Kapoor in Faridabad. Includes multiple living and dining areas, private theatre rooms, custom wardrobes, and handcrafted furniture.",
+  url: "https://melange-work.vercel.app/luxury-residence-interior",
+  image: "https://melange-work.vercel.app/Melange_Faridabad1_3.jpg",
+  creator: {
+    "@type": "LocalBusiness",
+    name: "Melange by Sangeeta Kapoor",
+    url: "https://melange-work.vercel.app",
+  },
+  locationCreated: {
+    "@type": "Place",
+    name: "Faridabad, Haryana, India",
+  },
+  review: {
+    "@type": "Review",
+    reviewBody:
+      "My house was very old, so I wanted to get it renovated. She really made my dreams come true. Everything is beautiful, you don't feel like going anywhere.",
+    author: { "@type": "Person", name: "Sashi & Mukesh Aggarwal" },
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+  },
+};
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const images1 = [
   { image: "/SashiAggarwal1_1.jpg" },
@@ -10,8 +76,15 @@ const images1 = [
   { image: "/SashiAggarwal1_3.jpg" },
   { image: "/SashiAggarwal1_4.jpg" },
 ];
-
 const centerImage1 = "/SashiAggarwal1_5.jpg";
+
+const images2 = [
+  { image: "/SashiAggarwal2_1.jpg" },
+  { image: "/SashiAggarwal2_2.jpg" },
+  { image: "/SashiAggarwal2_3.jpg" },
+  { image: "/SashiAggarwal2_4.jpg" },
+];
+const centerImage2 = "/SashiAggarwal2_5.jpg";
 
 const images3 = [
   { image: "/SashiAggarwal3_1.jpg" },
@@ -19,7 +92,6 @@ const images3 = [
   { image: "/SashiAggarwal3_3.jpg" },
   { image: "/SashiAggarwal3_4.jpg" },
 ];
-
 const centerImage3 = "/SashiAggarwal3_5.jpg";
 
 const images4 = [
@@ -28,17 +100,7 @@ const images4 = [
   { image: "/SashiAggarwal4_3.jpg" },
   { image: "/SashiAggarwal4_4.jpg" },
 ];
-
 const centerImage4 = "/SashiAggarwal4_5.jpg";
-
-const images2 = [
-  { image: "/SashiAggarwal2_1.jpg" },
-  { image: "/SashiAggarwal2_2.jpg" },
-  { image: "/SashiAggarwal2_3.jpg" },
-  { image: "/SashiAggarwal2_4.jpg" },
-];
-
-const centerImage2 = "/SashiAggarwal2_5.jpg";
 
 const images5 = [
   { image: "/Melange_Faridabad1_1.jpg" },
@@ -46,7 +108,6 @@ const images5 = [
   { image: "/Melange_Faridabad1_3.jpg" },
   { image: "/Melange_Faridabad1_4.jpg" },
 ];
-
 const centerImage5 = "/Melange_Faridabad1_5.jpg";
 
 const images6 = [
@@ -55,7 +116,6 @@ const images6 = [
   { image: "/Melange_Faridabad2_3.jpg" },
   { image: "/Melange_Faridabad2_4.jpg" },
 ];
-
 const centerImage6 = "/Melange_Faridabad2_5.jpg";
 
 const images7 = [
@@ -64,7 +124,6 @@ const images7 = [
   { image: "/Melange_Faridabad3_3.jpg" },
   { image: "/Melange_Faridabad3_4.jpg" },
 ];
-
 const centerImage7 = "/Melange_Faridabad3_5.jpg";
 
 const images8 = [
@@ -73,14 +132,7 @@ const images8 = [
   { image: "/Melange_Faridabad4_3.jpg" },
   { image: "/Melange_Faridabad4_4.jpg" },
 ];
-
 const centerImage8 = "/Melange_Faridabad4_5.jpg";
-
-// Project type: - Independent house (3 floors + terrace) end to end project
-// Estimated area: - 6000 sqft each floor
-// Location: - Faridabad
-// Competition time: - 2 years
-// Content:
 
 const projectDetails = {
   title: "Luxury Residence Interior",
@@ -116,19 +168,20 @@ const projectDetails = {
 };
 
 export const reelsData = [
-  {
-    embedUrl: "https://www.instagram.com/reel/DRrmAfLEs_2/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DR7f2edkt7h/embed",
-  },
+  { embedUrl: "https://www.instagram.com/reel/DRrmAfLEs_2/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DR7f2edkt7h/embed" },
 ];
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
 
 const page = () => {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ProjectDescription project={projectDetails} />
-
       <OurWork
         showTitle={false}
         centerImage={centerImage5}
@@ -149,7 +202,6 @@ const page = () => {
         centerImage={centerImage8}
         products={images8}
       />
-
       <OurWork
         showTitle={false}
         centerImage={centerImage1}
@@ -170,13 +222,11 @@ const page = () => {
         centerImage={centerImage4}
         products={images4}
       />
-
       <ClientTestimonial testimonial={projectDetails.testimonial} />
       <TestimonialVideo
         thumbnail={projectDetails.testimonial.thumbnail}
         video={projectDetails.testimonial.clip}
       />
-      {/* <InstagramReels reels={reelsData} /> */}
     </div>
   );
 };

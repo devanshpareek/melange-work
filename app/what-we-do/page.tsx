@@ -1,6 +1,6 @@
 import WhatWeDo from "@/components/WhatWeDo";
 import React from "react";
-import { services } from "../page";
+import { services } from "../HomeClient";
 
 const page = () => {
   return (

@@ -1,8 +1,73 @@
+import type { Metadata } from "next";
 import React from "react";
-import { ClientTestimonial, ProjectDescription } from "../../dlf-phase-4/page";
+import {
+  ClientTestimonial,
+  ProjectDescription,
+} from "../../ProjectDetailsHelper";
 import OurWork from "@/components/OurWork";
-import TestimonialVideo from "../../components/TestimonialVideo";
 import InstagramReels from "../../components/InstagramReels";
+
+// ─── SEO ──────────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: "Independent House Interior Design — Deepali Enclave, New Delhi",
+  description:
+    "Melange transformed a 2,600 sq ft independent house across 3 floors in Deepali Enclave, New Delhi. Intricate floor inlays, bespoke wall finishes, custom furniture, premium stone selections — completed in 18 months.",
+  keywords: [
+    "interior design Deepali Enclave Delhi",
+    "independent house interior design Delhi",
+    "3 floor house renovation Delhi",
+    "luxury home interiors Pitampura",
+    "interior designer New Delhi",
+    "custom furniture home design Delhi",
+    "Melange interior design Delhi",
+  ],
+  alternates: {
+    canonical: "https://melange-work.vercel.app/deepali-enclave",
+  },
+  openGraph: {
+    url: "https://melange-work.vercel.app/deepali-enclave",
+    title: "Independent House Interior — Deepali Enclave, New Delhi | Melange",
+    description:
+      "2,600 sq ft independent house across 3 floors in Deepali Enclave, New Delhi. Intricate inlays, bespoke finishes, and custom furniture in 18 months.",
+    images: [
+      {
+        url: "/Deepali1_1.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Deepali Enclave House Interior by Melange",
+      },
+    ],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Independent House Interior — Deepali Enclave, New Delhi",
+  description:
+    "Complete interior transformation of a 2,600 sq ft 3-floor independent house in Deepali Enclave, New Delhi. Premium flooring with intricate inlay designs, bespoke wall finishes, custom furniture, and meticulous material curation.",
+  url: "https://melange-work.vercel.app/deepali-enclave",
+  image: "https://melange-work.vercel.app/Deepali1_1.jpg",
+  creator: {
+    "@type": "LocalBusiness",
+    name: "Melange by Sangeeta Kapoor",
+    url: "https://melange-work.vercel.app",
+  },
+  locationCreated: {
+    "@type": "Place",
+    name: "Deepali Enclave, New Delhi, India",
+  },
+  review: {
+    "@type": "Review",
+    reviewBody:
+      "Their attention to detail, speed of execution, and responsiveness to every doubt no matter how many times you ask. They walk with you through every step. Our project was completed from scratch within 12 months, and without Melange, we are sure this would not have been possible.",
+    author: { "@type": "Person", name: "Pooja & Arun Gupta" },
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+  },
+};
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const images1 = [
   { image: "/Deepali1_1.jpg" },
@@ -10,7 +75,6 @@ const images1 = [
   { image: "/Deepali1_3.jpg" },
   { image: "/Deepali1_4.jpg" },
 ];
-
 const centerImage1 = "/Deepali1_5.jpg";
 
 const images2 = [
@@ -19,7 +83,6 @@ const images2 = [
   { image: "/Deepali2_3.jpg" },
   { image: "/Deepali2_4.jpg" },
 ];
-
 const centerImage2 = "/Deepali2_5.jpg";
 
 const images3 = [
@@ -28,7 +91,6 @@ const images3 = [
   { image: "/Deepali3_3.jpg" },
   { image: "/Deepali3_4.jpg" },
 ];
-
 const centerImage3 = "/Deepali3_5.jpg";
 
 const images4 = [
@@ -37,14 +99,7 @@ const images4 = [
   { image: "/Deepali4_3.jpg" },
   { image: "/Deepali4_4.jpg" },
 ];
-
 const centerImage4 = "/Deepali4_5.jpg";
-
-// Project type: - Independent house (3 floors + terrace) end to end project
-// Estimated area: - 6000 sqft each floor
-// Location: - Faridabad
-// Competition time: - 2 years
-// Content:
 
 const projectDetails = {
   title: "Independent house in Deepali Enclave",
@@ -80,22 +135,21 @@ const projectDetails = {
 };
 
 const reelsData = [
-  {
-    embedUrl: "https://www.instagram.com/reel/DS2iaVTErpx/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DTQSd7Ckq_d/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DTajdKPkhPU/embed",
-  },
-  {
-    embedUrl: "https://www.instagram.com/reel/DSK1SKsEgLD/embed",
-  },
+  { embedUrl: "https://www.instagram.com/reel/DS2iaVTErpx/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DTQSd7Ckq_d/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DTajdKPkhPU/embed" },
+  { embedUrl: "https://www.instagram.com/reel/DSK1SKsEgLD/embed" },
 ];
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
 const page = () => {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ProjectDescription project={projectDetails} />
       <OurWork
         showTitle={false}
@@ -117,7 +171,6 @@ const page = () => {
         centerImage={centerImage4}
         products={images4}
       />
-
       <ClientTestimonial testimonial={projectDetails.testimonial} />
       <InstagramReels reels={reelsData} />
     </div>
