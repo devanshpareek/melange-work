@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     "Melange interior design Faridabad",
   ],
   alternates: {
-    canonical: "https://melange-work.vercel.app/modern-villa-faridabad",
+    canonical: "https://xclusiveatmelange.com/modern-villa-faridabad",
   },
   openGraph: {
-    url: "https://melange-work.vercel.app/modern-villa-faridabad",
+    url: "https://xclusiveatmelange.com/modern-villa-faridabad",
     title: "Modern Villa Interior Design — 6,000 sq ft, Faridabad | Melange",
     description:
       "Complete interior design for a 6,000 sq ft modern villa across three floors in Faridabad. Bespoke furniture, premium finishes, and designer lighting.",
@@ -48,12 +48,12 @@ const jsonLd = {
   name: "Modern Villa Interior — Faridabad",
   description:
     "End-to-end interior design for a 6,000 sq ft independent house across three floors in Faridabad. Features double-height spaces, premium Italian marble, custom furniture, and layered designer lighting.",
-  url: "https://melange-work.vercel.app/modern-villa-faridabad",
-  image: "https://melange-work.vercel.app/AshishGupta1_1.jpg",
+  url: "https://xclusiveatmelange.com/modern-villa-faridabad",
+  image: "https://xclusiveatmelange.com/AshishGupta1_1.jpg",
   creator: {
     "@type": "LocalBusiness",
     name: "Melange by Sangeeta Kapoor",
-    url: "https://melange-work.vercel.app",
+    url: "https://xclusiveatmelange.com",
   },
   locationCreated: {
     "@type": "Place",

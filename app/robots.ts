@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://melange-work.vercel.app/sitemap.xml",
+    sitemap: "https://xclusiveatmelange.com/sitemap.xml",
   };
 }

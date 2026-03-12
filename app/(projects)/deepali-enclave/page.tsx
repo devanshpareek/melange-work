@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     "Melange interior design Delhi",
   ],
   alternates: {
-    canonical: "https://melange-work.vercel.app/deepali-enclave",
+    canonical: "https://xclusiveatmelange.com/deepali-enclave",
   },
   openGraph: {
-    url: "https://melange-work.vercel.app/deepali-enclave",
+    url: "https://xclusiveatmelange.com/deepali-enclave",
     title: "Independent House Interior — Deepali Enclave, New Delhi | Melange",
     description:
       "2,600 sq ft independent house across 3 floors in Deepali Enclave, New Delhi. Intricate inlays, bespoke finishes, and custom furniture in 18 months.",
@@ -47,12 +47,12 @@ const jsonLd = {
   name: "Independent House Interior — Deepali Enclave, New Delhi",
   description:
     "Complete interior transformation of a 2,600 sq ft 3-floor independent house in Deepali Enclave, New Delhi. Premium flooring with intricate inlay designs, bespoke wall finishes, custom furniture, and meticulous material curation.",
-  url: "https://melange-work.vercel.app/deepali-enclave",
-  image: "https://melange-work.vercel.app/Deepali1_1.jpg",
+  url: "https://xclusiveatmelange.com/deepali-enclave",
+  image: "https://xclusiveatmelange.com/Deepali1_1.jpg",
   creator: {
     "@type": "LocalBusiness",
     name: "Melange by Sangeeta Kapoor",
-    url: "https://melange-work.vercel.app",
+    url: "https://xclusiveatmelange.com",
   },
   locationCreated: {
     "@type": "Place",

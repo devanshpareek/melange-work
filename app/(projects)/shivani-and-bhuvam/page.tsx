@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     "Melange interior design Gurugram project",
   ],
   alternates: {
-    canonical: "https://melange-work.vercel.app/shivani-and-bhuvam",
+    canonical: "https://xclusiveatmelange.com/shivani-and-bhuvam",
   },
   openGraph: {
-    url: "https://melange-work.vercel.app/shivani-and-bhuvam",
+    url: "https://xclusiveatmelange.com/shivani-and-bhuvam",
     title:
       "Shivani & Bhuvam's Modern Penthouse — 4,500 sq ft, Gurugram | Melange",
     description:
@@ -48,12 +48,12 @@ const jsonLd = {
   name: "Shivani & Bhuvam's Modern Penthouse — Gurugram",
   description:
     "Complete design of a 4,500 sq ft independent house across three floors in Gurugram. Custom ceiling designs, premium flooring throughout all levels, stunning wall finishes, and bespoke furniture tailored to each space.",
-  url: "https://melange-work.vercel.app/shivani-and-bhuvam",
-  image: "https://melange-work.vercel.app/bhuvam11.jpg",
+  url: "https://xclusiveatmelange.com/shivani-and-bhuvam",
+  image: "https://xclusiveatmelange.com/bhuvam11.jpg",
   creator: {
     "@type": "LocalBusiness",
     name: "Melange by Sangeeta Kapoor",
-    url: "https://melange-work.vercel.app",
+    url: "https://xclusiveatmelange.com",
   },
   locationCreated: {
     "@type": "Place",

@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     "Melange interior design penthouse",
   ],
   alternates: {
-    canonical: "https://melange-work.vercel.app/luxury-modern-penthouse",
+    canonical: "https://xclusiveatmelange.com/luxury-modern-penthouse",
   },
   openGraph: {
-    url: "https://melange-work.vercel.app/luxury-modern-penthouse",
+    url: "https://xclusiveatmelange.com/luxury-modern-penthouse",
     title: "Luxury Modern Penthouse Makeover — 3,000 sq ft, Noida | Melange",
     description:
       "Contemporary penthouse makeover across 3,000 sq ft in Noida. Modern living areas, custom bedrooms, mandir space, and premium finishes in 11 months.",
@@ -47,12 +47,12 @@ const jsonLd = {
   name: "Luxury Modern Penthouse Makeover — Noida",
   description:
     "Complete transformation of a 3,000 sq ft penthouse in Noida. Bright modern living area, dedicated mandir space, study zone, custom bedroom furniture, new flooring, and curated décor — completed in 11 months.",
-  url: "https://melange-work.vercel.app/luxury-modern-penthouse",
-  image: "https://melange-work.vercel.app/Sec_15_Noida_1_1.jpg",
+  url: "https://xclusiveatmelange.com/luxury-modern-penthouse",
+  image: "https://xclusiveatmelange.com/Sec_15_Noida_1_1.jpg",
   creator: {
     "@type": "LocalBusiness",
     name: "Melange by Sangeeta Kapoor",
-    url: "https://melange-work.vercel.app",
+    url: "https://xclusiveatmelange.com",
   },
   locationCreated: {
     "@type": "Place",

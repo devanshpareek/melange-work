@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     "Melange interior design Gurugram",
   ],
   alternates: {
-    canonical: "https://melange-work.vercel.app/platinum-towers-gurugram",
+    canonical: "https://xclusiveatmelange.com/platinum-towers-gurugram",
   },
   openGraph: {
-    url: "https://melange-work.vercel.app/platinum-towers-gurugram",
+    url: "https://xclusiveatmelange.com/platinum-towers-gurugram",
     title:
       "Luxury 4BHK Apartment Interior — Platinum Towers, Gurugram | Melange",
     description:
@@ -49,12 +49,12 @@ const jsonLd = {
   name: "Prestigious Apartment Interior — Platinum Towers, Gurugram",
   description:
     "Complete interior design for a 4,800 sq ft luxury apartment at Platinum Towers, Gurugram. Bespoke ceilings, intricate wall finishes, custom-crafted furniture, and seamless luxury execution.",
-  url: "https://melange-work.vercel.app/platinum-towers-gurugram",
-  image: "https://melange-work.vercel.app/Praveen_Nangia1_1.jpg",
+  url: "https://xclusiveatmelange.com/platinum-towers-gurugram",
+  image: "https://xclusiveatmelange.com/Praveen_Nangia1_1.jpg",
   creator: {
     "@type": "LocalBusiness",
     name: "Melange by Sangeeta Kapoor",
-    url: "https://melange-work.vercel.app",
+    url: "https://xclusiveatmelange.com",
   },
   locationCreated: {
     "@type": "Place",

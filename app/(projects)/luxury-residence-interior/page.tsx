@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     "Melange interior design project",
   ],
   alternates: {
-    canonical: "https://melange-work.vercel.app/luxury-residence-interior",
+    canonical: "https://xclusiveatmelange.com/luxury-residence-interior",
   },
   openGraph: {
-    url: "https://melange-work.vercel.app/luxury-residence-interior",
+    url: "https://xclusiveatmelange.com/luxury-residence-interior",
     title: "27,000 sq ft Luxury Residence Interior — Faridabad | Melange",
     description:
       "End-to-end design of a 27,000 sq ft luxury residence in Faridabad. Multiple living areas, theatre rooms, and handcrafted furniture across three floors.",
@@ -48,12 +48,12 @@ const jsonLd = {
   name: "Luxury Residence Interior — Faridabad",
   description:
     "A sprawling 27,000 sq ft luxury residence designed end-to-end by Melange by Sangeeta Kapoor in Faridabad. Includes multiple living and dining areas, private theatre rooms, custom wardrobes, and handcrafted furniture.",
-  url: "https://melange-work.vercel.app/luxury-residence-interior",
-  image: "https://melange-work.vercel.app/Melange_Faridabad1_3.jpg",
+  url: "https://xclusiveatmelange.com/luxury-residence-interior",
+  image: "https://xclusiveatmelange.com/Melange_Faridabad1_3.jpg",
   creator: {
     "@type": "LocalBusiness",
     name: "Melange by Sangeeta Kapoor",
-    url: "https://melange-work.vercel.app",
+    url: "https://xclusiveatmelange.com",
   },
   locationCreated: {
     "@type": "Place",

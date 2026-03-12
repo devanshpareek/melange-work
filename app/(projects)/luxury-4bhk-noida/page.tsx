@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     "Melange interior design Noida",
   ],
   alternates: {
-    canonical: "https://melange-work.vercel.app/luxury-4bhk-noida",
+    canonical: "https://xclusiveatmelange.com/luxury-4bhk-noida",
   },
   openGraph: {
-    url: "https://melange-work.vercel.app/luxury-4bhk-noida",
+    url: "https://xclusiveatmelange.com/luxury-4bhk-noida",
     title:
       "Prestigious 4BHK Apartment Interior — Pearl Gateway, Noida | Melange",
     description:
@@ -48,12 +48,12 @@ const jsonLd = {
   name: "Prestigious 4BHK Apartment Interior — Pearl Gateway, Noida",
   description:
     "End-to-end interior design for a 3,000 sq ft 4BHK apartment at Pearl Gateway, Noida. Elegant ceilings, custom furniture, and premium finishes delivered in 6 months.",
-  url: "https://melange-work.vercel.app/luxury-4bhk-noida",
-  image: "https://melange-work.vercel.app/adarsh_aggarwal1_1.jpg",
+  url: "https://xclusiveatmelange.com/luxury-4bhk-noida",
+  image: "https://xclusiveatmelange.com/adarsh_aggarwal1_1.jpg",
   creator: {
     "@type": "LocalBusiness",
     name: "Melange by Sangeeta Kapoor",
-    url: "https://melange-work.vercel.app",
+    url: "https://xclusiveatmelange.com",
   },
   locationCreated: {
     "@type": "Place",

@@ -49,8 +49,8 @@ export async function generateMetadata({
   const { category } = await searchParams;
   const meta = (category && categoryMeta[category]) || defaultMeta;
   const canonicalUrl = category
-    ? `https://melange-work.vercel.app/category?category=${category}`
-    : "https://melange-work.vercel.app/category";
+    ? `https://xclusiveatmelange.com/category?category=${category}`
+    : "https://xclusiveatmelange.com/category";
 
   return {
     title: meta.title,

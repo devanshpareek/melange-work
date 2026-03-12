@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://melange-work.vercel.app";
+  const baseUrl = "https://xclusiveatmelange.com";
 
   return [
     {

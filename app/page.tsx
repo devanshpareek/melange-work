@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   description:
     "Melange by Sangeeta Kapoor is a luxury interior design studio based in Gurgaon with 25+ years of experience crafting bespoke homes across India and the UK. Specialising in end-to-end residential interiors — from design to installation.",
   alternates: {
-    canonical: "https://melange-work.vercel.app",
+    canonical: "https://xclusiveatmelange.com",
   },
   openGraph: {
-    url: "https://melange-work.vercel.app",
+    url: "https://xclusiveatmelange.com",
     title:
       "Melange by Sangeeta Kapoor | Luxury Interior Design Studio, Gurgaon",
     description:
@@ -30,11 +30,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": ["LocalBusiness", "InteriorDesigner"],
-      "@id": "https://melange-work.vercel.app/#business",
+      "@id": "https://xclusiveatmelange.com/#business",
       name: "Melange by Sangeeta Kapoor",
       description:
         "Luxury interior design studio based in Gurgaon with over 25 years of experience designing bespoke homes across India and the UK.",
-      url: "https://melange-work.vercel.app",
+      url: "https://xclusiveatmelange.com",
       telephone: ["+91-9810163804", "+91-9560025169"],
       email: "sangeeta.xclusivecreations@gmail.com",
       foundingDate: "1997",
@@ -53,17 +53,17 @@ const jsonLd = {
       },
       areaServed: ["Gurgaon", "Faridabad", "Noida", "Delhi", "United Kingdom"],
       priceRange: "₹₹₹₹",
-      image: "https://melange-work.vercel.app/Slider1.jpg",
-      logo: "https://melange-work.vercel.app/logo.png",
+      image: "https://xclusiveatmelange.com/Slider1.jpg",
+      logo: "https://xclusiveatmelange.com/logo.png",
       sameAs: ["https://www.instagram.com/melange.by.sangeetakapoor/"],
     },
     {
       "@type": "WebSite",
-      "@id": "https://melange-work.vercel.app/#website",
-      url: "https://melange-work.vercel.app",
+      "@id": "https://xclusiveatmelange.com/#website",
+      url: "https://xclusiveatmelange.com",
       name: "Melange by Sangeeta Kapoor",
       publisher: {
-        "@id": "https://melange-work.vercel.app/#business",
+        "@id": "https://xclusiveatmelange.com/#business",
       },
     },
   ],

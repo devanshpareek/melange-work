@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://melange-work.vercel.app"),
+  metadataBase: new URL("https://xclusiveatmelange.com"),
   title: {
     default:
       "Melange by Sangeeta Kapoor | Luxury Interior Design Studio, Gurgaon",
@@ -25,9 +25,7 @@ export const metadata: Metadata = {
     "end to end interior design",
     "home renovation Delhi NCR",
   ],
-  authors: [
-    { name: "Sangeeta Kapoor", url: "https://melange-work.vercel.app" },
-  ],
+  authors: [{ name: "Sangeeta Kapoor", url: "https://xclusiveatmelange.com" }],
   creator: "Melange by Sangeeta Kapoor",
   publisher: "Melange by Sangeeta Kapoor",
   robots: {
@@ -43,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://melange-work.vercel.app",
+    url: "https://xclusiveatmelange.com",
     siteName: "Melange by Sangeeta Kapoor",
     title:
       "Melange by Sangeeta Kapoor | Luxury Interior Design Studio, Gurgaon",
