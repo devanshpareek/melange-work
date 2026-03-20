@@ -61,6 +61,11 @@ const jsonLd = {
   },
   review: {
     "@type": "Review",
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      name: "Melange by Sangeeta Kapoor",
+      url: "https://xclusiveatmelange.com",
+    },
     reviewBody:
       "My house was very old, so I wanted to get it renovated. She really made my dreams come true. Everything is beautiful, you don't feel like going anywhere.",
     author: { "@type": "Person", name: "Sashi & Mukesh Aggarwal" },

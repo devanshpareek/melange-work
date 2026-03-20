@@ -61,6 +61,11 @@ const jsonLd = {
   },
   review: {
     "@type": "Review",
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      name: "Melange by Sangeeta Kapoor",
+      url: "https://xclusiveatmelange.com",
+    },
     reviewBody:
       "From the initial consultation to the final reveal, their creativity, attention to detail, and understanding of my vision were outstanding. Every room now feels modern, functional, and perfectly tailored to my lifestyle.",
     author: { "@type": "Person", name: "Shivani & Bhuvam" },

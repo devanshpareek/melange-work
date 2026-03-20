@@ -60,6 +60,11 @@ const jsonLd = {
   },
   review: {
     "@type": "Review",
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      name: "Melange by Sangeeta Kapoor",
+      url: "https://xclusiveatmelange.com",
+    },
     reviewBody:
       "Working with MELANGE was an absolute pleasure. They transformed our house into a home that perfectly reflects our style and meets all our functional needs. The attention to detail and quality of craftsmanship exceeded our expectations.",
     author: { "@type": "Person", name: "Richa and Mahesh Gupta" },

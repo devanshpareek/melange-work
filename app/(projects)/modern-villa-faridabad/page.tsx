@@ -61,6 +61,11 @@ const jsonLd = {
   },
   review: {
     "@type": "Review",
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      name: "Melange by Sangeeta Kapoor",
+      url: "https://xclusiveatmelange.com",
+    },
     reviewBody:
       "We are in love with the space. Sangeeta ma'am truly understood each one of us and the interiors were done wonderfully. Every furniture, every fabric, really reflects us.",
     author: { "@type": "Person", name: "Shreya Gupta" },
