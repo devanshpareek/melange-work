@@ -60,18 +60,6 @@ const jsonLd = {
     "@type": "Place",
     name: "Gurugram, Haryana, India",
   },
-  review: {
-    "@type": "Review",
-    itemReviewed: {
-      "@type": "LocalBusiness",
-      name: "Melange by Sangeeta Kapoor",
-      url: "https://xclusiveatmelange.com",
-    },
-    reviewBody:
-      "The most important thing about her is that it's not like a house, it's a home. When you enter, it gives a feeling you have come to your home, your abode.",
-    author: { "@type": "Person", name: "Jyoti & Praveen Nangia" },
-    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-  },
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────

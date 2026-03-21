@@ -58,18 +58,6 @@ const jsonLd = {
     "@type": "Place",
     name: "Deepali Enclave, New Delhi, India",
   },
-  review: {
-    "@type": "Review",
-    itemReviewed: {
-      "@type": "LocalBusiness",
-      name: "Melange by Sangeeta Kapoor",
-      url: "https://xclusiveatmelange.com",
-    },
-    reviewBody:
-      "Their attention to detail, speed of execution, and responsiveness to every doubt no matter how many times you ask. They walk with you through every step. Our project was completed from scratch within 12 months, and without Melange, we are sure this would not have been possible.",
-    author: { "@type": "Person", name: "Pooja & Arun Gupta" },
-    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-  },
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────

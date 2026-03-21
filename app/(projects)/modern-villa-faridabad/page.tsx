@@ -59,18 +59,6 @@ const jsonLd = {
     "@type": "Place",
     name: "Faridabad, Haryana, India",
   },
-  review: {
-    "@type": "Review",
-    itemReviewed: {
-      "@type": "LocalBusiness",
-      name: "Melange by Sangeeta Kapoor",
-      url: "https://xclusiveatmelange.com",
-    },
-    reviewBody:
-      "We are in love with the space. Sangeeta ma'am truly understood each one of us and the interiors were done wonderfully. Every furniture, every fabric, really reflects us.",
-    author: { "@type": "Person", name: "Shreya Gupta" },
-    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-  },
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
